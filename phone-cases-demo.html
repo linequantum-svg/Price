@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Демо категорії Чохли для телефонів</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="catalog-demo.css?v=9">
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <div class="brand-block">        <h1>Phone Cases Market</h1>
+        <p class="brand-category">Чохли для телефонів</p>
+      </div>
+      <div class="topbar-search">
+        <input id="searchInput" type="search" placeholder="&#1055;&#1086;&#1096;&#1091;&#1082; &#1087;&#1086; &#1074;&#1089;&#1100;&#1086;&#1084;&#1091; &#1082;&#1072;&#1090;&#1072;&#1083;&#1086;&#1075;&#1091;">
+        <button id="clearSearch" type="button">&#1057;&#1082;&#1080;&#1085;&#1091;&#1090;&#1080;</button>
+      </div>
+      <div class="topbar-meta">
+        <select id="availabilitySort" aria-label="&#1057;&#1086;&#1088;&#1090;&#1091;&#1074;&#1072;&#1085;&#1085;&#1103; &#1079;&#1072; &#1085;&#1072;&#1103;&#1074;&#1085;&#1110;&#1089;&#1090;&#1102;">
+          <option value="default">&#1053;&#1072;&#1103;&#1074;&#1085;&#1110;&#1089;&#1090;&#1100;: &#1079;&#1072; &#1079;&#1072;&#1084;&#1086;&#1074;&#1095;&#1091;&#1074;&#1072;&#1085;&#1085;&#1103;&#1084;</option>
+          <option value="available-first">&#1057;&#1087;&#1086;&#1095;&#1072;&#1090;&#1082;&#1091; &#1074; &#1085;&#1072;&#1103;&#1074;&#1085;&#1086;&#1089;&#1090;&#1110;</option>
+          <option value="unavailable-first">&#1057;&#1087;&#1086;&#1095;&#1072;&#1090;&#1082;&#1091; &#1074;&#1110;&#1076;&#1089;&#1091;&#1090;&#1085;&#1110;</option>
+        </select>
+        <select id="priceSort" aria-label="&#1057;&#1086;&#1088;&#1090;&#1091;&#1074;&#1072;&#1085;&#1085;&#1103; &#1079;&#1072; &#1094;&#1110;&#1085;&#1086;&#1102;">
+          <option value="default">&#1062;&#1110;&#1085;&#1072;: &#1079;&#1072; &#1079;&#1072;&#1084;&#1086;&#1074;&#1095;&#1091;&#1074;&#1072;&#1085;&#1085;&#1103;&#1084;</option>
+          <option value="drop-asc">&#1044;&#1088;&#1086;&#1087;: &#1074;&#1110;&#1076; &#1076;&#1077;&#1096;&#1077;&#1074;&#1080;&#1093;</option>
+          <option value="drop-desc">&#1044;&#1088;&#1086;&#1087;: &#1074;&#1110;&#1076; &#1076;&#1086;&#1088;&#1086;&#1075;&#1080;&#1093;</option>
+        </select>      </div>
+    </header>
+
+    <section class="market-layout">
+      <aside class="sidebar">
+        <div class="sidebar-card category-nav-card">
+          <span class="side-label">&#1050;&#1072;&#1090;&#1077;&#1075;&#1086;&#1088;&#1110;&#1111;</span>
+          <div class="category-group">
+            <button class="category-group-title" type="button" aria-expanded="true">
+              <span class="category-group-icon" aria-hidden="true">&#8801;</span>
+              <span>&#1050;&#1072;&#1090;&#1072;&#1083;&#1086;&#1075; &#1090;&#1086;&#1074;&#1072;&#1088;&#1110;&#1074;</span>
+            </button>
+                        <nav class="category-nav" aria-label="Категорії каталогу">
+              <a class="category-nav-link" href="markers-demo.html"><span class="category-icon" aria-hidden="true">&#9998;</span><span>Маркери</span></a>
+              <div class="category-parent-block">
+                <div class="category-parent-label">
+                  <span class="category-icon" aria-hidden="true">&#8986;</span>
+                  <span>Годинники</span>
+                </div>
+                <div class="subcategory-nav">
+                  <a class="category-nav-link category-nav-sublink" href="skmei-demo.html"><span class="category-icon" aria-hidden="true">&#9679;</span><span>Годинники Skmei</span></a>
+                  <a class="category-nav-link category-nav-sublink" href="catalog-demo.html"><span class="category-icon" aria-hidden="true">&#9679;</span><span>Годинники Olevs</span></a>
+                  <a class="category-nav-link category-nav-sublink" href="smartwatches-demo.html"><span class="category-icon" aria-hidden="true">&#9679;</span><span>Смарт-годинники</span></a>
+                  <a class="category-nav-link category-nav-sublink" href="kids-smartwatches-demo.html"><span class="category-icon" aria-hidden="true">&#9679;</span><span>Дитячі годинники</span></a>
+                  <a class="category-nav-link category-nav-sublink" href="straps-demo.html"><span class="category-icon" aria-hidden="true">&#9679;</span><span>Ремінці</span></a>
+                </div>
+              </div>
+              <div class="category-parent-block">
+                <div class="category-parent-label">
+                  <span class="category-icon" aria-hidden="true">&#127911;</span>
+                  <span>Навушники</span>
+                </div>
+                <div class="subcategory-nav">
+                  <a class="category-nav-link category-nav-sublink" href="wireless-headphones-demo.html"><span class="category-icon" aria-hidden="true">&#9679;</span><span>Навушники TWS</span></a>
+                  <a class="category-nav-link category-nav-sublink" href="over-ear-headphones-demo.html"><span class="category-icon" aria-hidden="true">&#9679;</span><span>Накладні навушники</span></a>
+                  <a class="category-nav-link category-nav-sublink" href="cases-demo.html"><span class="category-icon" aria-hidden="true">&#9679;</span><span>Чохли для навушників</span></a>
+                </div>
+              </div>
+              <a class="category-nav-link" href="complects-demo.html"><span class="category-icon" aria-hidden="true">&#127873;</span><span>Комплекти</span></a>
+              <a class="category-nav-link" href="lighting-demo.html"><span class="category-icon" aria-hidden="true">&#128161;</span><span>Світильники</span></a>
+              <a class="category-nav-link" href="adapters-demo.html"><span class="category-icon" aria-hidden="true">&#128268;</span><span>Адаптери</span></a>
+              <a class="category-nav-link" href="powerbanks-demo.html"><span class="category-icon" aria-hidden="true">&#128267;</span><span>Павербанки, зарядні пристрої</span></a>
+              <a class="category-nav-link is-active" href="phone-cases-demo.html"><span class="category-icon" aria-hidden="true">&#128241;</span><span>Чохли для телефонів</span></a>
+            </nav>
+          </div>
+        </div>
+
+        <div class="sidebar-card intro-card">
+          <span class="side-label">&#1050;&#1072;&#1090;&#1077;&#1075;&#1086;&#1088;&#1110;&#1103;</span>
+          <strong>Чохли для телефонів</strong>
+          <p>Категорія Чохли для телефонів з цінами, фото та статусом наявності.</p>
+        </div>
+
+        <div class="sidebar-card">
+          <span class="side-label">&#1058;&#1086;&#1074;&#1072;&#1088;&#1110;&#1074;</span>
+          <strong id="itemsCount">0</strong>
+        </div>
+
+        <div class="sidebar-card">
+          <span class="side-label">&#1042; &#1085;&#1072;&#1103;&#1074;&#1085;&#1086;&#1089;&#1090;&#1110;</span>
+          <strong id="availableCount">0</strong>
+        </div>
+
+        <div class="sidebar-card">
+          <span class="side-label">&#1044;&#1110;&#1072;&#1087;&#1072;&#1079;&#1086;&#1085; &#1076;&#1088;&#1086;&#1087;</span>
+          <strong id="priceRange">-</strong>
+        </div>
+
+        <div class="sidebar-card photo-card">
+          <span class="side-label">&#1060;&#1086;&#1090;&#1086;</span>
+          <a class="sidebar-link" href="https://drive.google.com/drive/folders/1H1OiqQ0n2qgpWKtooPwmRAbsv6l6dRfd" target="_blank" rel="noreferrer">&#1042;&#1110;&#1076;&#1082;&#1088;&#1080;&#1090;&#1080; &#1092;&#1086;&#1090;&#1086;</a>
+        </div>
+      </aside>
+
+      <section class="catalog-shell">
+        <div class="catalog-head">
+          <div>
+            <h2>Каталог чохлів для телефонів</h2>
+          </div>
+          <span id="resultsCount" class="results-pill">0 &#1087;&#1086;&#1079;&#1080;&#1094;&#1110;&#1081;</span>
+        </div>
+
+        <div id="productGrid" class="product-grid"></div>
+
+        <div id="emptyState" class="empty-state" hidden>
+          <h3>&#1053;&#1110;&#1095;&#1086;&#1075;&#1086; &#1085;&#1077; &#1079;&#1085;&#1072;&#1081;&#1076;&#1077;&#1085;&#1086;</h3>
+          <p>&#1057;&#1087;&#1088;&#1086;&#1073;&#1091;&#1081; &#1079;&#1084;&#1110;&#1085;&#1080;&#1090;&#1080; &#1079;&#1072;&#1087;&#1080;&#1090; &#1087;&#1086;&#1096;&#1091;&#1082;&#1091; &#1072;&#1073;&#1086; &#1089;&#1082;&#1080;&#1085;&#1091;&#1090;&#1080; &#1092;&#1110;&#1083;&#1100;&#1090;&#1088;&#1080;.</p>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="olevs-data.js"></script>
+  <script src="markers-data.js?v=3"></script>
+  <script src="complects-data.js"></script>
+  <script src="smartwatches-data.js?v=45"></script>
+  <script src="kids-smartwatches-data.js?v=45"></script>
+  <script src="wireless-headphones-data.js?v=4"></script>
+  <script src="over-ear-headphones-data.js"></script>
+  <script src="cases-data.js?v=4"></script>
+  <script src="lighting-data.js?v=7"></script>
+  <script src="adapters-data.js?v=3"></script>
+  <script src="powerbanks-data.js?v=4"></script>
+  <script src="phone-cases-data.js?v=12"></script>
+  <script src="skmei-data.js?v=2"></script>
+  <script src="straps-data.js?v=1"></script>
+  <script src="phone-cases-demo.js?v=4"></script>
+  <script src="mobile-menu.js?v=1"></script>`r`n</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

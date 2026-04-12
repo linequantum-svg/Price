@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Демо категорії Годинники Skmei</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="catalog-demo.css?v=9">
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <div class="brand-block">        <h1>Skmei Market</h1>
+        <p class="brand-category">Годинники Skmei</p>
+      </div>
+      <div class="topbar-search">
+        <input id="searchInput" type="search" placeholder="Пошук по всьому каталогу">
+        <button id="clearSearch" type="button">Скинути</button>
+      </div>
+      <div class="topbar-meta">
+        <select id="availabilitySort" aria-label="Сортування за наявністю">
+          <option value="default">Наявність: за замовчуванням</option>
+          <option value="available-first">Спочатку в наявності</option>
+          <option value="unavailable-first">Спочатку відсутні</option>
+        </select>
+        <select id="priceSort" aria-label="Сортування за ціною">
+          <option value="default">Ціна: за замовчуванням</option>
+          <option value="drop-asc">Дроп: від дешевих</option>
+          <option value="drop-desc">Дроп: від дорогих</option>
+        </select>      </div>
+    </header>
+
+    <section class="market-layout">
+      <aside class="sidebar">
+        <div class="sidebar-card category-nav-card">
+          <span class="side-label">Категорії</span>
+          <div class="category-group">
+            <button class="category-group-title" type="button" aria-expanded="true">
+              <span class="category-group-icon" aria-hidden="true">&#8801;</span>
+              <span>Каталог товарів</span>
+            </button>
+                        <nav class="category-nav" aria-label="Категорії каталогу">
+              <a class="category-nav-link" href="markers-demo.html"><span class="category-icon" aria-hidden="true">&#9998;</span><span>Маркери</span></a>
+              <div class="category-parent-block">
+                <div class="category-parent-label">
+                  <span class="category-icon" aria-hidden="true">&#8986;</span>
+                  <span>Годинники</span>
+                </div>
+                <div class="subcategory-nav">
+                  <a class="category-nav-link category-nav-sublink is-active" href="skmei-demo.html"><span class="category-icon" aria-hidden="true">&#9679;</span><span>Годинники Skmei</span></a>
+                  <a class="category-nav-link category-nav-sublink" href="catalog-demo.html"><span class="category-icon" aria-hidden="true">&#9679;</span><span>Годинники Olevs</span></a>
+                  <a class="category-nav-link category-nav-sublink" href="smartwatches-demo.html"><span class="category-icon" aria-hidden="true">&#9679;</span><span>Смарт-годинники</span></a>
+                  <a class="category-nav-link category-nav-sublink" href="kids-smartwatches-demo.html"><span class="category-icon" aria-hidden="true">&#9679;</span><span>Дитячі годинники</span></a>
+                  <a class="category-nav-link category-nav-sublink" href="straps-demo.html"><span class="category-icon" aria-hidden="true">&#9679;</span><span>Ремінці</span></a>
+                </div>
+              </div>
+              <div class="category-parent-block">
+                <div class="category-parent-label">
+                  <span class="category-icon" aria-hidden="true">&#127911;</span>
+                  <span>Навушники</span>
+                </div>
+                <div class="subcategory-nav">
+                  <a class="category-nav-link category-nav-sublink" href="wireless-headphones-demo.html"><span class="category-icon" aria-hidden="true">&#9679;</span><span>Навушники TWS</span></a>
+                  <a class="category-nav-link category-nav-sublink" href="over-ear-headphones-demo.html"><span class="category-icon" aria-hidden="true">&#9679;</span><span>Накладні навушники</span></a>
+                  <a class="category-nav-link category-nav-sublink" href="cases-demo.html"><span class="category-icon" aria-hidden="true">&#9679;</span><span>Чохли для навушників</span></a>
+                </div>
+              </div>
+              <a class="category-nav-link" href="complects-demo.html"><span class="category-icon" aria-hidden="true">&#127873;</span><span>Комплекти</span></a>
+              <a class="category-nav-link" href="lighting-demo.html"><span class="category-icon" aria-hidden="true">&#128161;</span><span>Світильники</span></a>
+              <a class="category-nav-link" href="adapters-demo.html"><span class="category-icon" aria-hidden="true">&#128268;</span><span>Адаптери</span></a>
+              <a class="category-nav-link" href="powerbanks-demo.html"><span class="category-icon" aria-hidden="true">&#128267;</span><span>Павербанки, зарядні пристрої</span></a>
+              <a class="category-nav-link" href="phone-cases-demo.html"><span class="category-icon" aria-hidden="true">&#128241;</span><span>Чохли для телефонів</span></a>
+            </nav>
+          </div>
+        </div>
+
+        <div class="sidebar-card intro-card">
+          <span class="side-label">Категорія</span>
+          <strong>Годинники Skmei</strong>
+          <p>Категорія Годинники Skmei з цінами, фото та статусом наявності.</p>
+        </div>
+
+        <div class="sidebar-card">
+          <span class="side-label">Товарів</span>
+          <strong id="itemsCount">0</strong>
+        </div>
+
+        <div class="sidebar-card">
+          <span class="side-label">В наявності</span>
+          <strong id="availableCount">0</strong>
+        </div>
+
+        <div class="sidebar-card">
+          <span class="side-label">Діапазон дроп</span>
+          <strong id="priceRange">-</strong>
+        </div>
+
+        <div class="sidebar-card photo-card">
+          <span class="side-label">Фото</span>
+          <a class="sidebar-link" href="https://drive.google.com/drive/folders/16hmFwuw-bINqC3WVNSHGRzbyusUUjXGD" target="_blank" rel="noreferrer">Відкрити фото</a>
+        </div>
+      </aside>
+
+      <section class="catalog-shell">
+        <div class="catalog-head">
+          <div>
+            <h2>Каталог годинників Skmei</h2>
+          </div>
+          <span id="resultsCount" class="results-pill">0 позицій</span>
+        </div>
+
+        <div id="productGrid" class="product-grid"></div>
+
+        <div id="emptyState" class="empty-state" hidden>
+          <h3>Нічого не знайдено</h3>
+          <p>Спробуй змінити запит пошуку або скинути фільтри.</p>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="olevs-data.js?v=3"></script>
+  <script src="markers-data.js?v=4"></script>
+  <script src="complects-data.js?v=2"></script>
+  <script src="smartwatches-data.js?v=46"></script>
+  <script src="kids-smartwatches-data.js?v=46"></script>
+  <script src="wireless-headphones-data.js?v=4"></script>
+  <script src="over-ear-headphones-data.js?v=2"></script>
+  <script src="cases-data.js?v=5"></script>
+  <script src="lighting-data.js?v=8"></script>
+  <script src="adapters-data.js?v=4"></script>
+  <script src="powerbanks-data.js?v=5"></script>
+  <script src="phone-cases-data.js?v=8"></script>
+  <script src="skmei-data.js?v=47"></script>
+  <script src="straps-data.js?v=2"></script>
+  <script src="skmei-demo.js?v=5"></script>
+  <script src="mobile-menu.js?v=1"></script>`r`n</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
