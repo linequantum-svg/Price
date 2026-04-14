@@ -675,7 +675,7 @@ button {
   display: block;
   color: var(--muted);
   font-size: 11px;
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: 0.08em;
   min-height: 1.75em;
   line-height: 0.95;
