@@ -144,6 +144,69 @@ button {
   align-items: center;
 }
 
+.topbar-contacts {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.topbar-contact-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+  min-width: 150px;
+  min-height: 42px;
+}
+
+.topbar-contact-chip:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 18px rgba(44, 37, 30, 0.08);
+}
+
+.topbar-contact-chip--telegram {
+  background: #e7f5ff;
+  color: #176d9f;
+  border: 1px solid rgba(23, 109, 159, 0.14);
+}
+
+.topbar-contact-chip--viber {
+  background: #f2ebff;
+  color: #7446b8;
+  border: 1px solid rgba(116, 70, 184, 0.14);
+}
+
+.topbar-contact-chip--phone {
+  background: #f7f1e8;
+  color: #2c241d;
+  border: 1px solid rgba(44, 36, 29, 0.08);
+}
+
+.topbar-contact-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  flex-shrink: 0;
+}
+
+.topbar-contact-icon svg {
+  width: 13px;
+  height: 13px;
+  display: block;
+}
+
 .meta-pill {
   display: inline-flex;
   align-items: center;
@@ -339,6 +402,22 @@ button {
 .category-nav-link:hover {
   transform: translateX(2px);
   border-color: rgba(255, 122, 26, 0.2);
+}
+
+.category-nav-link--info {
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, rgba(255, 245, 234, 0.96), rgba(255, 255, 255, 0.98));
+  border-color: rgba(239, 127, 26, 0.14);
+}
+
+.category-nav-link--info .category-icon {
+  background: linear-gradient(180deg, #ffe8d1 0%, #ffc892 100%);
+  color: #b85f12;
+  font-size: 11px;
+  font-weight: 800;
+  border-radius: 999px;
+  border: 1px solid rgba(184, 95, 18, 0.16);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55);
 }
 
 .category-icon {
@@ -693,6 +772,11 @@ button {
     justify-content: start;
   }
 
+  .topbar-contacts {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
   .market-layout {
     grid-template-columns: 1fr;
   }
@@ -741,9 +825,20 @@ button {
   }
 
   .topbar-meta {
+    gap: 8px;
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .topbar-contacts {
+    width: 100%;
     gap: 8px;
+    align-items: stretch;
+  }
+
+  .topbar-contact-chip {
+    padding: 9px 12px;
+    font-size: 11px;
   }
 
   select {

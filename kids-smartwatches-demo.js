@@ -21,7 +21,7 @@ const AVAILABLE_LABEL = "В наявності";
 const UNAVAILABLE_LABEL = "Немає в наявності";
 const PHOTO_LABEL = "Фото";
 const PHOTO_COMING_SOON_LABEL = "Фото скоро буде";
-const DROP_LABEL = "Дроп";
+const DROP_LABEL = "Дропшип";
 const OPT_LABEL = "Опт";
 const POSITIONS_LABEL = "позицій";
 const CURRENCY_UAH = "грн";
@@ -51,7 +51,7 @@ const categoryPhotoFolderUrls = {
   [MARKERS_CATEGORY]: "https://drive.google.com/drive/folders/1xJrjvroaG9CQ9HZPx7u0rt4PrLmPzExS",
   [COMPLECTS_CATEGORY]: "https://drive.google.com/drive/folders/1_fkneQ2_jjqxjLgxbT1sXCstKNaJIdLR",
   [SMARTWATCHES_CATEGORY]: "https://drive.google.com/drive/folders/1e_82mlV4UWysgEmE9KIsnkUE6jrEumYV?usp=sharing",
-  [CURRENT_CATEGORY]: "https://docs.google.com/spreadsheets/u/0/d/1m2Q9k_wTTadYmDHRk82PgL8UWn84aC6R/htmlview/sheet?hl=en&pli=1&headers=true&gid=80987745",
+  [CURRENT_CATEGORY]: "https://drive.google.com/drive/folders/1yzbaBqPhleuNkdBjPneUp93GzU_hhvON",
   [WIRELESS_HEADPHONES_CATEGORY]: "#",
   [OVER_EAR_HEADPHONES_CATEGORY]: "#"
 };
@@ -204,6 +204,7 @@ availabilitySort.addEventListener("change", renderProducts);
 priceSort.addEventListener("change", renderProducts);
 
 renderProducts();
+
 
 
 

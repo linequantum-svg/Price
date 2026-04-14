@@ -8,7 +8,7 @@ const itemsCount = document.querySelector("#itemsCount");
 const availableCount = document.querySelector("#availableCount");
 const priceRange = document.querySelector("#priceRange");
 const resultsCount = document.querySelector("#resultsCount");
-const PHOTO_FOLDER_URL = "https://drive.google.com/drive/folders/1DysMrENjVA6gKtlRy6soyj176NuwYeCl";
+const PHOTO_FOLDER_URL = "https://drive.google.com/drive/folders/1H235sCA4MTgPyZciZvWCVaXenkaXgX9T";
 const CASES_CATEGORY_LABEL = "Чохли для навушників";
 
 const AVAILABLE_LABEL = "В наявності";
@@ -96,7 +96,7 @@ const buildCard = (product) => {
       </div>
       <div class="prices">
         <div class="price-box">
-          <span>Дроп</span>
+          <span>Дропшип</span>
           <strong>${product.drop || "-"}</strong>
         </div>
         <div class="price-box">
@@ -155,6 +155,7 @@ availabilitySort.addEventListener("change", renderProducts);
 priceSort.addEventListener("change", renderProducts);
 
 renderProducts();
+
 
 
 

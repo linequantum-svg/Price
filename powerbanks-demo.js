@@ -69,7 +69,7 @@ const buildCard = (product) => {
       </div>
       <div class="prices">
         <div class="price-box">
-          <span>Дроп</span>
+          <span>Дропшип</span>
           <strong>${product.drop || "-"}</strong>
         </div>
         <div class="price-box">
@@ -143,5 +143,6 @@ availabilitySort.addEventListener("change", renderProducts);
 priceSort.addEventListener("change", renderProducts);
 
 renderProducts();
+
 
 

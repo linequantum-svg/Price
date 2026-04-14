@@ -23,7 +23,7 @@ const AVAILABLE_LABEL = "В наявності";
 const UNAVAILABLE_LABEL = "Немає в наявності";
 const PHOTO_LABEL = "Фото";
 const PHOTO_COMING_SOON_LABEL = "Фото скоро буде";
-const DROP_LABEL = "Дроп";
+const DROP_LABEL = "Дропшип";
 const OPT_LABEL = "Опт";
 const POSITIONS_LABEL = "позицій";
 const CURRENCY_UAH = "грн";
@@ -197,6 +197,7 @@ availabilitySort.addEventListener("change", renderProducts);
 priceSort.addEventListener("change", renderProducts);
 
 renderProducts();
+
 
 
 

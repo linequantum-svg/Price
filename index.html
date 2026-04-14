@@ -1,16 +1,454 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Price Catalog</title>
-  <meta http-equiv="refresh" content="0; url=markers-demo.html">
-  <link rel="canonical" href="markers-demo.html">
+  <title>&#1030;&#1085;&#1092;&#1086;&#1088;&#1084;&#1072;&#1094;&#1110;&#1103;</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="catalog-demo.css?v=9">
+  <style>
+    .info-panel {
+      display: grid;
+      gap: 18px;
+      margin-top: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      align-items: stretch;
+    }
+
+    .info-item {
+      background: linear-gradient(180deg, #fffdf9 0%, #fff8ef 100%);
+      border: 1px solid rgba(239, 127, 26, 0.12);
+      border-radius: 26px;
+      padding: 22px 20px;
+      box-shadow: 0 18px 40px rgba(133, 90, 28, 0.08);
+      min-height: 280px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .info-item--wide {
+      grid-column: 1 / -1;
+      min-height: auto;
+    }
+
+    .info-item-head {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+      min-height: 0;
+    }
+
+    .info-item-icon {
+      width: 46px;
+      height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #eef7ff 0%, #dff0ff 100%);
+      border: 1px solid rgba(74, 138, 255, 0.18);
+      color: #2b6cb0;
+      font-size: 22px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .info-item-title {
+      margin: 0;
+      font-size: 1.1rem;
+      line-height: 1.25;
+      color: #1e1e1e;
+      display: flex;
+      align-items: center;
+      min-height: 0;
+    }
+
+    .info-item p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    .info-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 1rem;
+    }
+
+    .info-item-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      min-height: 0;
+    }
+
+    .contact-lines {
+      display: grid;
+      gap: 8px;
+      font-weight: 700;
+      color: #3f3f3f;
+    }
+
+    .contact-lines span {
+      color: #111111;
+      letter-spacing: 0.02em;
+    }
+
+    .contact-actions {
+      display: grid;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .contact-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 0.95rem;
+      transition: transform 0.16s ease, box-shadow 0.16s ease;
+      width: fit-content;
+    }
+
+    .contact-chip:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 20px rgba(17, 17, 17, 0.08);
+    }
+
+    .contact-chip--phone {
+      background: #f5efe7;
+      color: #2c241d;
+      border: 1px solid rgba(44, 36, 29, 0.08);
+    }
+
+    .contact-chip--telegram {
+      background: #e7f5ff;
+      color: #1570a6;
+      border: 1px solid rgba(21, 112, 166, 0.14);
+    }
+
+    .contact-chip--viber {
+      background: #f1ebff;
+      color: #6d3db6;
+      border: 1px solid rgba(109, 61, 182, 0.14);
+    }
+
+    .contact-chip-icon {
+      width: 22px;
+      height: 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.82);
+    }
+
+    .contact-chip-icon svg {
+      width: 14px;
+      height: 14px;
+      display: block;
+      fill: currentColor;
+    }
+
+    .phone-image-wrap {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+    }
+
+    .phone-image {
+      display: block;
+      height: 24px;
+      width: auto;
+    }
+
+    .info-note {
+      color: #7a7a7a;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .search-results {
+      margin-top: 26px;
+    }
+
+    @media (max-width: 1180px) {
+      .info-panel {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .info-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .info-item {
+        padding: 20px 18px;
+        border-radius: 22px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <main class="page">
+    <header class="topbar">
+      <div class="brand-block">
+        <h1>&#1030;&#1085;&#1092;&#1086;&#1088;&#1084;&#1072;&#1094;&#1110;&#1103;</h1>
+        <p class="brand-category">&#1057;&#1083;&#1091;&#1078;&#1073;&#1086;&#1074;&#1072; &#1089;&#1090;&#1086;&#1088;&#1110;&#1085;&#1082;&#1072; &#1082;&#1072;&#1090;&#1072;&#1083;&#1086;&#1075;&#1091;</p>
+      </div>
+      <div class="topbar-search">
+        <input id="searchInput" type="search" placeholder="&#1055;&#1086;&#1096;&#1091;&#1082; &#1087;&#1086; &#1074;&#1089;&#1100;&#1086;&#1084;&#1091; &#1082;&#1072;&#1090;&#1072;&#1083;&#1086;&#1075;&#1091;">
+        <button id="clearSearch" type="button">&#1057;&#1082;&#1080;&#1085;&#1091;&#1090;&#1080;</button>
+      </div>
+      <div class="topbar-meta">
+        <select id="availabilitySort" aria-label="&#1057;&#1086;&#1088;&#1090;&#1091;&#1074;&#1072;&#1085;&#1085;&#1103; &#1079;&#1072; &#1085;&#1072;&#1103;&#1074;&#1085;&#1110;&#1089;&#1090;&#1102;">
+          <option value="default">&#1053;&#1072;&#1103;&#1074;&#1085;&#1110;&#1089;&#1090;&#1100;: &#1079;&#1072; &#1079;&#1072;&#1084;&#1086;&#1074;&#1095;&#1091;&#1074;&#1072;&#1085;&#1085;&#1103;&#1084;</option>
+          <option value="available-first">&#1057;&#1087;&#1086;&#1095;&#1072;&#1090;&#1082;&#1091; &#1074; &#1085;&#1072;&#1103;&#1074;&#1085;&#1086;&#1089;&#1090;&#1110;</option>
+          <option value="unavailable-first">&#1057;&#1087;&#1086;&#1095;&#1072;&#1090;&#1082;&#1091; &#1074;&#1110;&#1076;&#1089;&#1091;&#1090;&#1085;&#1110;</option>
+        </select>
+        <select id="priceSort" aria-label="&#1057;&#1086;&#1088;&#1090;&#1091;&#1074;&#1072;&#1085;&#1085;&#1103; &#1079;&#1072; &#1094;&#1110;&#1085;&#1086;&#1102;">
+          <option value="default">&#1062;&#1110;&#1085;&#1072;: &#1079;&#1072; &#1079;&#1072;&#1084;&#1086;&#1074;&#1095;&#1091;&#1074;&#1072;&#1085;&#1085;&#1103;&#1084;</option>
+          <option value="drop-asc">&#1044;&#1088;&#1086;&#1087;&#1096;&#1080;&#1087;: &#1074;&#1110;&#1076; &#1076;&#1077;&#1096;&#1077;&#1074;&#1080;&#1093;</option>
+          <option value="drop-desc">&#1044;&#1088;&#1086;&#1087;&#1096;&#1080;&#1087;: &#1074;&#1110;&#1076; &#1076;&#1086;&#1088;&#1086;&#1075;&#1080;&#1093;</option>
+        </select>
+      </div>
+    </header>
+
+    <section class="market-layout">
+      <aside class="sidebar">
+        <div class="sidebar-card category-nav-card">
+          <span class="side-label">&#1050;&#1072;&#1090;&#1077;&#1075;&#1086;&#1088;&#1110;&#1111;</span>
+          <div class="category-group">
+            <button class="category-group-title" type="button" aria-expanded="true">
+              <span class="category-group-icon" aria-hidden="true">&#8801;</span>
+              <span>&#1050;&#1072;&#1090;&#1072;&#1083;&#1086;&#1075; &#1090;&#1086;&#1074;&#1072;&#1088;&#1110;&#1074;</span>
+            </button>
+            <nav class="category-nav" aria-label="&#1050;&#1072;&#1090;&#1077;&#1075;&#1086;&#1088;&#1110;&#1111; &#1082;&#1072;&#1090;&#1072;&#1083;&#1086;&#1075;&#1091;">
+              <a class="category-nav-link category-nav-link--info is-active" href="index.html"><span class="category-icon" aria-hidden="true">Info</span><span>&#1030;&#1085;&#1092;&#1086;&#1088;&#1084;&#1072;&#1094;&#1110;&#1103;</span></a>
+              <a class="category-nav-link" href="markers-demo.html"><span class="category-icon" aria-hidden="true">&#9998;</span><span>&#1052;&#1072;&#1088;&#1082;&#1077;&#1088;&#1080;</span></a>
+              <div class="category-parent-block">
+                <div class="category-parent-label">
+                  <span class="category-icon" aria-hidden="true">&#8986;</span>
+                  <span>&#1043;&#1086;&#1076;&#1080;&#1085;&#1085;&#1080;&#1082;&#1080;</span>
+                </div>
+                <div class="subcategory-nav">
+                  <a class="category-nav-link category-nav-sublink" href="skmei-demo.html"><span class="category-icon" aria-hidden="true">&#9679;</span><span>&#1043;&#1086;&#1076;&#1080;&#1085;&#1085;&#1080;&#1082;&#1080; Skmei</span></a>
+                  <a class="category-nav-link category-nav-sublink" href="catalog-demo.html"><span class="category-icon" aria-hidden="true">&#9679;</span><span>&#1043;&#1086;&#1076;&#1080;&#1085;&#1085;&#1080;&#1082;&#1080; Olevs</span></a>
+                  <a class="category-nav-link category-nav-sublink" href="smartwatches-demo.html"><span class="category-icon" aria-hidden="true">&#9679;</span><span>&#1057;&#1084;&#1072;&#1088;&#1090;-&#1075;&#1086;&#1076;&#1080;&#1085;&#1085;&#1080;&#1082;&#1080;</span></a>
+                  <a class="category-nav-link category-nav-sublink" href="kids-smartwatches-demo.html"><span class="category-icon" aria-hidden="true">&#9679;</span><span>&#1044;&#1080;&#1090;&#1103;&#1095;&#1110; &#1075;&#1086;&#1076;&#1080;&#1085;&#1085;&#1080;&#1082;&#1080;</span></a>
+                  <a class="category-nav-link category-nav-sublink" href="straps-demo.html"><span class="category-icon" aria-hidden="true">&#9679;</span><span>&#1056;&#1077;&#1084;&#1110;&#1085;&#1094;&#1110;</span></a>
+                </div>
+              </div>
+              <div class="category-parent-block">
+                <div class="category-parent-label">
+                  <span class="category-icon" aria-hidden="true">&#127911;</span>
+                  <span>&#1053;&#1072;&#1074;&#1091;&#1096;&#1085;&#1080;&#1082;&#1080;</span>
+                </div>
+                <div class="subcategory-nav">
+                  <a class="category-nav-link category-nav-sublink" href="wireless-headphones-demo.html"><span class="category-icon" aria-hidden="true">&#9679;</span><span>&#1053;&#1072;&#1074;&#1091;&#1096;&#1085;&#1080;&#1082;&#1080; TWS</span></a>
+                  <a class="category-nav-link category-nav-sublink" href="over-ear-headphones-demo.html"><span class="category-icon" aria-hidden="true">&#9679;</span><span>&#1053;&#1072;&#1082;&#1083;&#1072;&#1076;&#1085;&#1110; &#1085;&#1072;&#1074;&#1091;&#1096;&#1085;&#1080;&#1082;&#1080;</span></a>
+                  <a class="category-nav-link category-nav-sublink" href="cases-demo.html"><span class="category-icon" aria-hidden="true">&#9679;</span><span>&#1063;&#1086;&#1093;&#1083;&#1080; &#1076;&#1083;&#1103; &#1085;&#1072;&#1074;&#1091;&#1096;&#1085;&#1080;&#1082;&#1110;&#1074;</span></a>
+                </div>
+              </div>
+              <a class="category-nav-link" href="complects-demo.html"><span class="category-icon" aria-hidden="true">&#127873;</span><span>&#1050;&#1086;&#1084;&#1087;&#1083;&#1077;&#1082;&#1090;&#1080;</span></a>
+              <a class="category-nav-link" href="lighting-demo.html"><span class="category-icon" aria-hidden="true">&#128161;</span><span>&#1057;&#1074;&#1110;&#1090;&#1080;&#1083;&#1100;&#1085;&#1080;&#1082;&#1080;</span></a>
+              <a class="category-nav-link" href="adapters-demo.html"><span class="category-icon" aria-hidden="true">&#128268;</span><span>&#1040;&#1076;&#1072;&#1087;&#1090;&#1077;&#1088;&#1080;</span></a>
+              <a class="category-nav-link" href="powerbanks-demo.html"><span class="category-icon" aria-hidden="true">&#128267;</span><span>&#1055;&#1072;&#1074;&#1077;&#1088;&#1073;&#1072;&#1085;&#1082;&#1080;, &#1079;&#1072;&#1088;&#1103;&#1076;&#1085;&#1110; &#1087;&#1088;&#1080;&#1089;&#1090;&#1088;&#1086;&#1111;</span></a>
+              <a class="category-nav-link" href="phone-cases-demo.html"><span class="category-icon" aria-hidden="true">&#128241;</span><span>&#1063;&#1086;&#1093;&#1083;&#1080; &#1076;&#1083;&#1103; &#1090;&#1077;&#1083;&#1077;&#1092;&#1086;&#1085;&#1110;&#1074;</span></a>
+            </nav>
+          </div>
+        </div>
+
+        <div class="sidebar-card intro-card">
+          <span class="side-label">&#1050;&#1072;&#1090;&#1077;&#1075;&#1086;&#1088;&#1110;&#1103;</span>
+          <strong>&#1030;&#1085;&#1092;&#1086;&#1088;&#1084;&#1072;&#1094;&#1110;&#1103;</strong>
+          <p>&#1057;&#1090;&#1086;&#1088;&#1110;&#1085;&#1082;&#1072; &#1079; &#1086;&#1089;&#1085;&#1086;&#1074;&#1085;&#1086;&#1102; &#1110;&#1085;&#1092;&#1086;&#1088;&#1084;&#1072;&#1094;&#1110;&#1108;&#1102; &#1087;&#1086; &#1074;&#1110;&#1076;&#1087;&#1088;&#1072;&#1074;&#1083;&#1077;&#1085;&#1085;&#1103;&#1093;, &#1087;&#1077;&#1088;&#1077;&#1074;&#1110;&#1088;&#1094;&#1110; &#1090;&#1086;&#1074;&#1072;&#1088;&#1091;, &#1075;&#1072;&#1088;&#1072;&#1085;&#1090;&#1110;&#1111;, &#1082;&#1091;&#1088;&#1089;&#1091; &#1090;&#1072; &#1082;&#1086;&#1085;&#1090;&#1072;&#1082;&#1090;&#1072;&#1093;.</p>
+        </div>
+      </aside>
+
+      <section class="catalog-shell">
+        <div class="catalog-head">
+          <div>
+            <h2>&#1030;&#1085;&#1092;&#1086;&#1088;&#1084;&#1072;&#1094;&#1110;&#1103;</h2>
+            <p>&#1059;&#1089;&#1077; &#1074;&#1072;&#1078;&#1083;&#1080;&#1074;&#1077; &#1087;&#1086; &#1074;&#1110;&#1076;&#1087;&#1088;&#1072;&#1074;&#1083;&#1077;&#1085;&#1085;&#1103;&#1093; &#1110; &#1091;&#1084;&#1086;&#1074;&#1072;&#1093; &#1088;&#1086;&#1073;&#1086;&#1090;&#1080; &#1079;&#1110;&#1073;&#1088;&#1072;&#1085;&#1086; &#1074; &#1086;&#1076;&#1085;&#1086;&#1084;&#1091; &#1084;&#1110;&#1089;&#1094;&#1110;.</p>
+          </div>
+        </div>
+
+        <section class="info-panel">
+          <article class="info-item">
+            <div class="info-item-head">
+              <span class="info-item-icon" aria-hidden="true">&#9742;</span>
+              <h3 class="info-item-title">&#1050;&#1086;&#1085;&#1090;&#1072;&#1082;&#1090;&#1080;</h3>
+            </div>
+            <div class="contact-lines" id="contactLines">&#1047;&#1072;&#1074;&#1072;&#1085;&#1090;&#1072;&#1078;&#1077;&#1085;&#1085;&#1103; &#1082;&#1086;&#1085;&#1090;&#1072;&#1082;&#1090;&#1110;&#1074;...</div>
+          </article>
+
+          <article class="info-item">
+            <div class="info-item-head">
+              <span class="info-item-icon" aria-hidden="true">$</span>
+              <h3 class="info-item-title">&#1050;&#1091;&#1088;&#1089;</h3>
+            </div>
+            <p>&#1050;&#1091;&#1088;&#1089;: 1 $ = 44 &#1075;&#1088;&#1085;</p>
+          </article>
+
+          <article class="info-item">
+            <div class="info-item-head">
+              <span class="info-item-icon" aria-hidden="true">&#128666;</span>
+              <h3 class="info-item-title">&#1042;&#1110;&#1076;&#1087;&#1088;&#1072;&#1074;&#1083;&#1077;&#1085;&#1085;&#1103;</h3>
+            </div>
+            <ul class="info-list">
+              <li>&#1042;&#1110;&#1076;&#1087;&#1088;&#1072;&#1074;&#1083;&#1077;&#1085;&#1085;&#1103; &#1053;&#1086;&#1074;&#1086;&#1102; &#1087;&#1086;&#1096;&#1090;&#1086;&#1102; &#1082;&#1086;&#1078;&#1085;&#1086;&#1075;&#1086; &#1076;&#1085;&#1103; (&#1087;&#1086;&#1085;&#1077;&#1076;&#1110;&#1083;&#1086;&#1082;-&#1089;&#1091;&#1073;&#1086;&#1090;&#1072;).</li>
+              <li>&#1058;&#1072;&#1082;&#1086;&#1078; &#1087;&#1088;&#1072;&#1094;&#1102;&#1108;&#1084;&#1086; &#1079; &#1059;&#1082;&#1088;&#1087;&#1086;&#1096;&#1090;&#1086;&#1102;, Rozetka &#1090;&#1072; Meest.</li>
+            </ul>
+          </article>
+
+          <article class="info-item">
+            <div class="info-item-head">
+              <span class="info-item-icon" aria-hidden="true">&#128269;</span>
+              <h3 class="info-item-title">&#1055;&#1077;&#1088;&#1077;&#1074;&#1110;&#1088;&#1082;&#1072; &#1090;&#1086;&#1074;&#1072;&#1088;&#1091;</h3>
+            </div>
+            <div class="info-item-copy">
+              <p>&#1042;&#1077;&#1089;&#1100; &#1090;&#1086;&#1074;&#1072;&#1088; &#1087;&#1077;&#1088;&#1077;&#1074;&#1110;&#1088;&#1103;&#1108;&#1090;&#1100;&#1089;&#1103; &#1087;&#1077;&#1088;&#1077;&#1076; &#1074;&#1110;&#1076;&#1087;&#1088;&#1072;&#1074;&#1083;&#1077;&#1085;&#1085;&#1103;&#1084; &#1085;&#1072; &#1085;&#1072;&#1103;&#1074;&#1085;&#1110;&#1089;&#1090;&#1100; &#1073;&#1088;&#1072;&#1082;&#1091;.</p>
+              <p>&#1053;&#1072;&#1084; &#1074;&#1072;&#1078;&#1083;&#1080;&#1074;&#1086; &#1084;&#1110;&#1085;&#1110;&#1084;&#1110;&#1079;&#1091;&#1074;&#1072;&#1090;&#1080; &#1088;&#1080;&#1079;&#1080;&#1082; &#1073;&#1088;&#1072;&#1082;&#1091;, &#1090;&#1086;&#1084;&#1091; &#1084;&#1080; &#1091;&#1074;&#1072;&#1078;&#1085;&#1086; &#1087;&#1077;&#1088;&#1077;&#1075;&#1083;&#1103;&#1076;&#1072;&#1108;&#1084;&#1086; &#1090;&#1086;&#1074;&#1072;&#1088; &#1097;&#1077; &#1076;&#1086; &#1074;&#1110;&#1076;&#1087;&#1088;&#1072;&#1074;&#1082;&#1080;.</p>
+            </div>
+          </article>
+
+          <article class="info-item">
+            <div class="info-item-head">
+              <span class="info-item-icon" aria-hidden="true">&#10004;</span>
+              <h3 class="info-item-title">&#1043;&#1072;&#1088;&#1072;&#1085;&#1090;&#1110;&#1103; &#1090;&#1072; &#1087;&#1086;&#1074;&#1077;&#1088;&#1085;&#1077;&#1085;&#1085;&#1103;</h3>
+            </div>
+            <div class="info-item-copy">
+              <ul class="info-list">
+                <li>&#1043;&#1072;&#1088;&#1072;&#1085;&#1090;&#1110;&#1103; &#1085;&#1072; &#1090;&#1086;&#1074;&#1072;&#1088;.</li>
+                <li>&#1055;&#1086;&#1074;&#1077;&#1088;&#1085;&#1077;&#1085;&#1085;&#1103; &#1072;&#1073;&#1086; &#1079;&#1072;&#1084;&#1110;&#1085;&#1072; &#1084;&#1086;&#1078;&#1083;&#1080;&#1074;&#1110; &#1073;&#1077;&#1079; &#1087;&#1088;&#1086;&#1073;&#1083;&#1077;&#1084; &#1110; &#1073;&#1077;&#1079; &#1079;&#1072;&#1081;&#1074;&#1080;&#1093; &#1089;&#1082;&#1083;&#1072;&#1076;&#1085;&#1086;&#1097;&#1110;&#1074;.</li>
+                <li>&#1071;&#1082;&#1097;&#1086; &#1097;&#1086;&#1089;&#1100; &#1085;&#1077; &#1090;&#1072;&#1082;, &#1084;&#1080; &#1096;&#1074;&#1080;&#1076;&#1082;&#1086; &#1076;&#1086;&#1087;&#1086;&#1084;&#1086;&#1078;&#1077;&#1084;&#1086; &#1110; &#1089;&#1087;&#1086;&#1082;&#1110;&#1081;&#1085;&#1086; &#1074;&#1080;&#1088;&#1110;&#1096;&#1080;&#1084;&#1086; &#1087;&#1080;&#1090;&#1072;&#1085;&#1085;&#1103;.</li>
+              </ul>
+            </div>
+          </article>
+
+        </section>
+
+        <section id="searchResultsSection" class="search-results" hidden>
+          <div class="catalog-head">
+            <div>
+              <h2>&#1056;&#1077;&#1079;&#1091;&#1083;&#1100;&#1090;&#1072;&#1090;&#1080; &#1087;&#1086;&#1096;&#1091;&#1082;&#1091;</h2>
+            </div>
+            <span id="resultsCount" class="results-pill">0 &#1087;&#1086;&#1079;&#1080;&#1094;&#1110;&#1081;</span>
+          </div>
+
+          <div id="productGrid" class="product-grid"></div>
+
+          <div id="emptyState" class="empty-state" hidden>
+            <h3>&#1053;&#1110;&#1095;&#1086;&#1075;&#1086; &#1085;&#1077; &#1079;&#1085;&#1072;&#1081;&#1076;&#1077;&#1085;&#1086;</h3>
+            <p>&#1057;&#1087;&#1088;&#1086;&#1073;&#1091;&#1081; &#1079;&#1084;&#1110;&#1085;&#1080;&#1090;&#1080; &#1079;&#1072;&#1087;&#1080;&#1090; &#1087;&#1086;&#1096;&#1091;&#1082;&#1091; &#1072;&#1073;&#1086; &#1089;&#1082;&#1080;&#1085;&#1091;&#1090;&#1080; &#1092;&#1110;&#1083;&#1100;&#1090;&#1088;&#1080;.</p>
+          </div>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <script src="olevs-data.js"></script>
+  <script src="markers-data.js?v=3"></script>
+  <script src="complects-data.js"></script>
+  <script src="smartwatches-data.js?v=45"></script>
+  <script src="kids-smartwatches-data.js?v=46"></script>
+  <script src="wireless-headphones-data.js?v=4"></script>
+  <script src="over-ear-headphones-data.js"></script>
+  <script src="cases-data.js?v=4"></script>
+  <script src="lighting-data.js?v=7"></script>
+  <script src="adapters-data.js?v=3"></script>
+  <script src="powerbanks-data.js?v=4"></script>
+  <script src="phone-cases-data.js?v=7"></script>
+  <script src="skmei-data.js?v=2"></script>
+  <script src="straps-data.js?v=1"></script>
+  <script src="index-demo.js?v=1"></script>
+  <script src="topbar-contacts.js?v=1"></script>
+  <script src="mobile-menu.js?v=1"></script>
   <script>
-    window.location.replace("markers-demo.html");
+    (() => {
+      const a = "066";
+      const b = "323";
+      const c = "2180";
+      const raw = [a, b, c].join("");
+      const pretty = `${a} ${b} ${c}`;
+      const el = document.getElementById("contactLines");
+      if (!el) return;
+
+      el.innerHTML = `
+        <div class="contact-actions">
+          <a class="contact-chip contact-chip--telegram" href="https://t.me/+380663232180" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+            <span class="contact-chip-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img" focusable="false">
+                <path d="M21.6 4.2 18.4 19c-.2 1-1 1.3-1.9.8l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.4-.1-.6-.6-.3l-11 6.9-4.7-1.5c-1-.3-1-1 .2-1.5L20 3c.9-.3 1.8.2 1.6 1.2Z"></path>
+              </svg>
+            </span>
+            <span>Telegram</span>
+          </a>
+          <a class="contact-chip contact-chip--viber" href="viber://chat?number=%2B380663232180" aria-label="Viber">
+            <span class="contact-chip-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img" focusable="false">
+                <path d="M12 2C6.5 2 2 5.8 2 10.6c0 2.6 1.3 4.9 3.5 6.5V22l4.1-2.3c.8.2 1.6.3 2.4.3 5.5 0 10-3.8 10-8.6S17.5 2 12 2Zm5.2 11.5c-.3.8-1.4 1.5-2.3 1.7-.6.1-1.3.2-3.8-.8-3.2-1.3-5.2-4.5-5.4-4.8-.2-.3-1.3-1.7-1.3-3.2 0-1.5.8-2.3 1.1-2.6.3-.3.7-.4.9-.4h.7c.2 0 .5 0 .7.6.3.8 1 2.7 1.1 2.9.1.2.1.5 0 .7-.1.2-.2.4-.4.6l-.5.5c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.2 1.3 1.1 2.4 1.5 2.7 1.7.3.1.5.1.7-.1l.9-1.1c.2-.3.5-.3.8-.2.3.1 2.1 1 2.5 1.2.4.2.6.3.7.5.1.2.1 1-.2 1.8Z"></path>
+              </svg>
+            </span>
+            <span>Viber</span>
+          </a>
+          <a class="contact-chip contact-chip--phone" href="tel:+380663232180" aria-label="&#1047;&#1072;&#1090;&#1077;&#1083;&#1077;&#1092;&#1086;&#1085;&#1091;&#1074;&#1072;&#1090;&#1080;">
+            <span class="contact-chip-icon" aria-hidden="true">&#9742;</span>
+            <span class="phone-image-wrap" id="phoneImageWrap"></span>
+          </a>
+        </div>
+      `;
+
+      el.setAttribute("data-phone", raw);
+
+      const phoneMount = document.getElementById("phoneImageWrap");
+      if (phoneMount) {
+        const canvas = document.createElement("canvas");
+        const ctx = canvas.getContext("2d");
+        const text = `${a} ${b} ${c}`;
+        const fontSize = 24;
+        const font = `700 ${fontSize}px Inter, Manrope, sans-serif`;
+        const dpr = Math.max(2, window.devicePixelRatio || 1);
+
+        ctx.font = font;
+        const metrics = ctx.measureText(text);
+        const width = Math.ceil(metrics.width);
+        const height = 30;
+        canvas.width = width * dpr;
+        canvas.height = height * dpr;
+        canvas.style.width = `${width}px`;
+        canvas.style.height = `${height}px`;
+
+        const draw = canvas.getContext("2d");
+        draw.scale(dpr, dpr);
+        draw.font = font;
+        draw.fillStyle = "#111111";
+        draw.textBaseline = "middle";
+        draw.fillText(text, 0, 15);
+
+        const img = document.createElement("img");
+        img.className = "phone-image";
+        img.alt = "РўРµР»РµС„РѕРЅ";
+        img.src = canvas.toDataURL("image/png");
+        phoneMount.appendChild(img);
+      }
+    })();
   </script>
-  <p>Переходимо до каталогу. Якщо сторінка не відкрилась автоматично, натисни <a href="markers-demo.html">сюди</a>.</p>
 </body>
 </html>
+

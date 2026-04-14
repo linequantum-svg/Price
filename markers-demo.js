@@ -23,7 +23,7 @@ const AVAILABLE_LABEL = "\u0412 \u043d\u0430\u044f\u0432\u043d\u043e\u0441\u0442
 const UNAVAILABLE_LABEL = "\u041d\u0435\u043c\u0430\u0454 \u0432 \u043d\u0430\u044f\u0432\u043d\u043e\u0441\u0442\u0456";
 const PHOTO_LABEL = "\u0424\u043e\u0442\u043e";
 const PHOTO_COMING_SOON_LABEL = "\u0424\u043e\u0442\u043e \u0441\u043a\u043e\u0440\u043e \u0431\u0443\u0434\u0435";
-const DROP_LABEL = "\u0414\u0440\u043e\u043f";
+const DROP_LABEL = "\u0414\u0440\u043e\u043f\u0448\u0438\u043f";
 const OPT_LABEL = "\u041e\u043f\u0442";
 const POSITIONS_LABEL = "\u043f\u043e\u0437\u0438\u0446\u0456\u0439";
 const CURRENCY_UAH = "\u0433\u0440\u043d";
@@ -173,6 +173,7 @@ clearSearchButton.addEventListener("click", () => {
 });
 
 refreshCatalog();
+
 
 
 
