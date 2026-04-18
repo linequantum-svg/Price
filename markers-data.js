@@ -17,7 +17,7 @@
     bulk: "7,4$",
     image: "images/markers/item-002.png",
     availabilityUrl: "https://bit.ly/45isFp3",
-    availability: "Немає в наявності"
+    availability: "В наявності"
   },
   {
     name: "Маркер GuangNa Acrylic brush marker GN.8101 36шт",
@@ -27,7 +27,7 @@
     bulk: "11$",
     image: "images/markers/item-003.png",
     availabilityUrl: "https://bit.ly/45isFp3",
-    availability: "Немає в наявності"
+    availability: "В наявності"
   },
   {
     name: "Маркер GuangNa Acrylic brush marker GN.8101 48шт",
@@ -37,7 +37,7 @@
     bulk: "14,5$",
     image: "images/markers/item-004.png",
     availabilityUrl: "https://bit.ly/45isFp3",
-    availability: "Немає в наявності"
+    availability: "В наявності"
   },
   {
     name: "Маркер GuangNa Acrylic brush marker GN.8101 60шт",
@@ -77,7 +77,7 @@
     bulk: "36$",
     image: "images/markers/item-008.png",
     availabilityUrl: "https://bit.ly/45isFp3",
-    availability: "Немає в наявності"
+    availability: "В наявності"
   },
   {
     name: "Маркер GuangNa Acrylic brush marker GN.8101 168шт",
@@ -87,7 +87,7 @@
     bulk: "48$",
     image: "images/markers/item-009.png",
     availabilityUrl: "https://bit.ly/45isFp3",
-    availability: "Немає в наявності"
+    availability: "В наявності"
   },
   {
     name: "Маркер GuangNa Acrylic brush marker GN.8101 200шт",
@@ -97,7 +97,7 @@
     bulk: "58$",
     image: "images/markers/item-010.png",
     availabilityUrl: "https://bit.ly/45isFp3",
-    availability: "Немає в наявності"
+    availability: "В наявності"
   },
   {
     name: "Маркер GuangNa Acrylic brush marker GN.8101 240шт",
@@ -107,7 +107,7 @@
     bulk: "67$",
     image: "images/markers/item-011.png",
     availabilityUrl: "https://bit.ly/45isFp3",
-    availability: "Немає в наявності"
+    availability: "В наявності"
   },
   {
     name: "Маркер GuangNa Acrylic brush marker GN.8101 288шт",
@@ -117,7 +117,7 @@
     bulk: "79$",
     image: "images/markers/item-012.png",
     availabilityUrl: "https://bit.ly/45isFp3",
-    availability: "Немає в наявності"
+    availability: "В наявності"
   },
   {
     name: "Маркер Acrylic Painter CH-1011 12шт",
