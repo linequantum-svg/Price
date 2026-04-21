@@ -1,8 +1,9 @@
-const productGrid = document.getElementById("priceTableBody");
+const productGrid = document.getElementById("productGrid");
 const searchInput = document.getElementById("searchInput");
 const categoryFilter = document.getElementById("categoryFilter");
 const categoryChips = document.getElementById("categoryChips");
 const clearSearchButton = document.getElementById("clearSearch");
+const availabilitySort = document.getElementById("availabilitySort");
 const itemsCount = document.getElementById("itemsCount");
 const categoriesCount = document.getElementById("categoriesCount");
 const availableCount = document.getElementById("availableCount");
@@ -19,6 +20,18 @@ function normalize(value) {
 
 function isAvailable(status) {
   return normalize(status).includes("наяв");
+}
+
+function sortRowsByAvailability(rows, sortMode) {
+  if (sortMode === "available-first") {
+    return [...rows].sort((first, second) => Number(isAvailable(second.availability)) - Number(isAvailable(first.availability)));
+  }
+
+  if (sortMode === "unavailable-first") {
+    return [...rows].sort((first, second) => Number(isAvailable(first.availability)) - Number(isAvailable(second.availability)));
+  }
+
+  return rows;
 }
 
 function formatOptPrice(value) {
@@ -118,17 +131,22 @@ function filterRows(query, selectedCategory) {
 
 function refreshCatalog() {
   const filtered = filterRows(searchInput.value, categoryFilter.value);
+  const sorted = sortRowsByAvailability(filtered, availabilitySort?.value);
   renderCategoryChips();
-  renderProducts(filtered);
-  updateStats(filtered);
+  renderProducts(sorted);
+  updateStats(sorted);
 }
 
 searchInput.addEventListener("input", refreshCatalog);
 categoryFilter.addEventListener("change", refreshCatalog);
+availabilitySort?.addEventListener("change", refreshCatalog);
 
 clearSearchButton.addEventListener("click", () => {
   searchInput.value = "";
   categoryFilter.value = "";
+  if (availabilitySort) {
+    availabilitySort.value = "default";
+  }
   refreshCatalog();
 });
 

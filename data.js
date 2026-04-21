@@ -1,4 +1,4 @@
-const priceData = [
+﻿const priceData = [
     {
         "name":  "Годинник Olevs 2856 Black Natural",
         "category":  "Годинники Olevs",
@@ -2508,14 +2508,14 @@ const priceData = [
     {
         "name":  "Чохол Pro №1 (Чорний)",
         "category":  "Чохли для навушників",
-        "availability":  "Немає в наявності",
+        "availability":  "В наявності",
         "opt":  "0,6",
         "drop":  "30"
     },
     {
         "name":  "Чохол Pro №2 (Сірий)",
         "category":  "Чохли для навушників",
-        "availability":  "Немає в наявності",
+        "availability":  "В наявності",
         "opt":  "0,6",
         "drop":  "30"
     },
@@ -2585,7 +2585,7 @@ const priceData = [
     {
         "name":  "Чохол Pro №12 (Червоний)",
         "category":  "Чохли для навушників",
-        "availability":  "Немає в наявності",
+        "availability":  "В наявності",
         "opt":  "0,6",
         "drop":  "30"
     },
@@ -4312,3 +4312,5 @@ const priceData = [
         "drop":  ""
     }
 ];
+
+
