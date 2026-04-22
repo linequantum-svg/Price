@@ -1,4 +1,4 @@
-﻿const searchInput = document.getElementById("searchInput");
+const searchInput = document.getElementById("searchInput");
 const clearSearchButton = document.getElementById("clearSearch");
 const availabilitySort = document.getElementById("availabilitySort");
 const priceSort = document.getElementById("priceSort");
@@ -7,31 +7,31 @@ const productGrid = document.getElementById("productGrid");
 const resultsCount = document.getElementById("resultsCount");
 const emptyState = document.getElementById("emptyState");
 
-const AVAILABLE_LABEL = "Р’ РЅР°СЏРІРЅРѕСЃС‚С–";
-const UNAVAILABLE_LABEL = "РќРµРјР°С” РІ РЅР°СЏРІРЅРѕСЃС‚С–";
-const PHOTO_LABEL = "Р¤РѕС‚Рѕ";
-const PHOTO_COMING_SOON_LABEL = "Р¤РѕС‚Рѕ СЃРєРѕСЂРѕ Р±СѓРґРµ";
+const AVAILABLE_LABEL = "В наявності";
+const UNAVAILABLE_LABEL = "Немає в наявності";
+const PHOTO_LABEL = "Фото";
+const PHOTO_COMING_SOON_LABEL = "Фото скоро буде";
 const DROP_LABEL = "Дропшип";
-const OPT_LABEL = "РћРїС‚";
-const POSITIONS_LABEL = "РїРѕР·РёС†С–Р№";
+const OPT_LABEL = "Опт";
+const POSITIONS_LABEL = "позицій";
 
 const categoryPhotoFolderUrls = {
-  "Р“РѕРґРёРЅРЅРёРєРё Olevs": "https://drive.google.com/drive/folders/1zEVL5BXCgh3jEJ1Cq_iQG7XjFvkpXS_T",
-  "РњР°СЂРєРµСЂРё, С„Р»РѕРјР°СЃС‚РµСЂРё": "https://drive.google.com/drive/folders/1xJrjvroaG9CQ9HZPx7u0rt4PrLmPzExS",
-  "РљРѕРјРїР»РµРєС‚Рё": "https://drive.google.com/drive/folders/1_fkneQ2_jjqxjLgxbT1sXCstKNaJIdLR",
-  "РЎРјР°СЂС‚-РіРѕРґРёРЅРЅРёРєРё": "https://drive.google.com/drive/folders/1e_82mlV4UWysgEmE9KIsnkUE6jrEumYV?usp=sharing",
-  "Р”РёС‚СЏС‡С– РЎРјР°СЂС‚-РіРѕРґРёРЅРЅРёРєРё": "https://drive.google.com/drive/folders/1yzbaBqPhleuNkdBjPneUp93GzU_hhvON",
-  "Р”РёС‚СЏС‡С– РіРѕРґРёРЅРЅРёРєРё": "https://drive.google.com/drive/folders/1yzbaBqPhleuNkdBjPneUp93GzU_hhvON",
-  "РќР°РІСѓС€РЅРёРєРё TWS": "https://drive.google.com/drive/folders/1nbVj9VT4-4jCmiJOMKKnSHXSjPTx6euB",
-  "РќР°РєР»Р°РґРЅС– РЅР°РІСѓС€РЅРёРєРё": "https://drive.google.com/drive/folders/1sAdgP63i4HGtvK2jFLGIHm9i5hhAyJbu",
-  "Р§РѕС…Р»Рё": "https://drive.google.com/drive/folders/1H235sCA4MTgPyZciZvWCVaXenkaXgX9T",
-  "Р§РѕС…Р»Рё РґР»СЏ РЅР°РІСѓС€РЅРёРєС–РІ": "https://drive.google.com/drive/folders/1H235sCA4MTgPyZciZvWCVaXenkaXgX9T",
-  "Р§РѕС…Р»Рё РґР»СЏ С‚РµР»РµС„РѕРЅС–РІ": "https://drive.google.com/drive/folders/1H1OiqQ0n2qgpWKtooPwmRAbsv6l6dRfd",
-  "РЎРІС–С‚РёР»СЊРЅРёРєРё": "https://drive.google.com/drive/folders/1xsfMF3q1vQ27gllevrxopFcNOdARr5ia",
-  "РђРґР°РїС‚РµСЂРё": "https://drive.google.com/drive/folders/1Y8mUsDt-15TbTN--cvaudPC1OIDEVnSP",
-  "РџР°РІРµСЂР±Р°РЅРєРё, Р·Р°СЂСЏРґРЅС– РїСЂРёСЃС‚СЂРѕС—": "https://drive.google.com/drive/folders/1s7LYi9A2hD2Z3N9dcYqA5EEylYCD4MWc",
-  "Р“РѕРґРёРЅРЅРёРєРё Skmei": "https://drive.google.com/drive/folders/16hmFwuw-bINqC3WVNSHGRzbyusUUjXGD",
-  "Р РµРјС–РЅС†С–": "https://drive.google.com/drive/folders/1xuOtVHts5lBlode_keZi_u_tgc1LAQ5E"
+  "Годинники Olevs": "https://drive.google.com/drive/folders/1zEVL5BXCgh3jEJ1Cq_iQG7XjFvkpXS_T",
+  "Маркери, фломастери": "https://drive.google.com/drive/folders/1xJrjvroaG9CQ9HZPx7u0rt4PrLmPzExS",
+  "Комплекти": "https://drive.google.com/drive/folders/1_fkneQ2_jjqxjLgxbT1sXCstKNaJIdLR",
+  "Смарт-годинники": "https://drive.google.com/drive/folders/1e_82mlV4UWysgEmE9KIsnkUE6jrEumYV?usp=sharing",
+  "Дитячі Смарт-годинники": "https://drive.google.com/drive/folders/1yzbaBqPhleuNkdBjPneUp93GzU_hhvON",
+  "Дитячі годинники": "https://drive.google.com/drive/folders/1yzbaBqPhleuNkdBjPneUp93GzU_hhvON",
+  "Навушники TWS": "https://drive.google.com/drive/folders/1nbVj9VT4-4jCmiJOMKKnSHXSjPTx6euB",
+  "Накладні навушники": "https://drive.google.com/drive/folders/1sAdgP63i4HGtvK2jFLGIHm9i5hhAyJbu",
+  "Чохли": "https://drive.google.com/drive/folders/1H235sCA4MTgPyZciZvWCVaXenkaXgX9T",
+  "Чохли для навушників": "https://drive.google.com/drive/folders/1H235sCA4MTgPyZciZvWCVaXenkaXgX9T",
+  "Чохли для телефонів": "https://drive.google.com/drive/folders/1H1OiqQ0n2qgpWKtooPwmRAbsv6l6dRfd",
+  "Світильники": "https://drive.google.com/drive/folders/1xsfMF3q1vQ27gllevrxopFcNOdARr5ia",
+  "Адаптери": "https://drive.google.com/drive/folders/1Y8mUsDt-15TbTN--cvaudPC1OIDEVnSP",
+  "Павербанки, зарядні пристрої": "https://drive.google.com/drive/folders/1s7LYi9A2hD2Z3N9dcYqA5EEylYCD4MWc",
+  "Годинники Skmei": "https://drive.google.com/drive/folders/16hmFwuw-bINqC3WVNSHGRzbyusUUjXGD",
+  "Ремінці": "https://drive.google.com/drive/folders/1xuOtVHts5lBlode_keZi_u_tgc1LAQ5E"
 };
 
 const allProducts = [
@@ -72,15 +72,28 @@ function sortProducts(items) {
   const sorted = [...items];
 
   if (availabilitySort.value === "available-first") {
-    sorted.sort((first, second) => Number(isAvailable(second.availability)) - Number(isAvailable(first.availability)));
+    sorted.sort(
+      (first, second) =>
+        Number(isAvailable(second.availability)) - Number(isAvailable(first.availability))
+    );
   } else if (availabilitySort.value === "unavailable-first") {
-    sorted.sort((first, second) => Number(isAvailable(first.availability)) - Number(isAvailable(second.availability)));
+    sorted.sort(
+      (first, second) =>
+        Number(isAvailable(first.availability)) - Number(isAvailable(second.availability))
+    );
   }
 
   if (priceSort.value === "drop-asc") {
-    sorted.sort((first, second) => (parseDropAmount(first.drop) ?? Number.MAX_SAFE_INTEGER) - (parseDropAmount(second.drop) ?? Number.MAX_SAFE_INTEGER));
+    sorted.sort(
+      (first, second) =>
+        (parseDropAmount(first.drop) ?? Number.MAX_SAFE_INTEGER) -
+        (parseDropAmount(second.drop) ?? Number.MAX_SAFE_INTEGER)
+    );
   } else if (priceSort.value === "drop-desc") {
-    sorted.sort((first, second) => (parseDropAmount(second.drop) ?? -1) - (parseDropAmount(first.drop) ?? -1));
+    sorted.sort(
+      (first, second) =>
+        (parseDropAmount(second.drop) ?? -1) - (parseDropAmount(first.drop) ?? -1)
+    );
   }
 
   return sorted;
@@ -140,7 +153,9 @@ function filterProducts(query) {
     return [];
   }
 
-  return allProducts.filter((item) => normalize(`${item.name} ${item.category}`).includes(normalizedQuery));
+  return allProducts.filter((item) =>
+    normalize(`${item.name} ${item.category}`).includes(normalizedQuery)
+  );
 }
 
 function refreshCatalog() {
@@ -171,5 +186,16 @@ clearSearchButton.addEventListener("click", () => {
   refreshCatalog();
 });
 
-refreshCatalog();
+async function initializeStockSync() {
+  try {
+    const { syncKnownProductCollections } = await import("./stock-sync.js?v=2");
+    await syncKnownProductCollections(window);
+  } catch (error) {
+    console.error("Stock sync initialization failed.", error);
+  }
+}
 
+(async () => {
+  await initializeStockSync();
+  refreshCatalog();
+})();

@@ -24,11 +24,17 @@ function isAvailable(status) {
 
 function sortRowsByAvailability(rows, sortMode) {
   if (sortMode === "available-first") {
-    return [...rows].sort((first, second) => Number(isAvailable(second.availability)) - Number(isAvailable(first.availability)));
+    return [...rows].sort(
+      (first, second) =>
+        Number(isAvailable(second.availability)) - Number(isAvailable(first.availability))
+    );
   }
 
   if (sortMode === "unavailable-first") {
-    return [...rows].sort((first, second) => Number(isAvailable(first.availability)) - Number(isAvailable(second.availability)));
+    return [...rows].sort(
+      (first, second) =>
+        Number(isAvailable(first.availability)) - Number(isAvailable(second.availability))
+    );
   }
 
   return rows;
@@ -53,7 +59,10 @@ function populateCategoryFilter() {
 
 function renderCategoryChips() {
   const currentCategory = categoryFilter.value;
-  const chipData = [{ label: "Усі", value: "" }, ...categories.map((category) => ({ label: category, value: category }))];
+  const chipData = [
+    { label: "Усі", value: "" },
+    ...categories.map((category) => ({ label: category, value: category }))
+  ];
 
   categoryChips.innerHTML = "";
 
@@ -151,4 +160,17 @@ clearSearchButton.addEventListener("click", () => {
 });
 
 populateCategoryFilter();
-refreshCatalog();
+
+async function initializeStockSync() {
+  try {
+    const { syncKnownProductCollections } = await import("./stock-sync.js?v=2");
+    await syncKnownProductCollections(window);
+  } catch (error) {
+    console.error("Stock sync initialization failed.", error);
+  }
+}
+
+(async () => {
+  await initializeStockSync();
+  refreshCatalog();
+})();

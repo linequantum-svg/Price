@@ -153,6 +153,18 @@ clearButton.addEventListener("click", () => {
 availabilitySort.addEventListener("change", renderProducts);
 priceSort.addEventListener("change", renderProducts);
 
-renderProducts();
+async function initializeStockSync() {
+  try {
+    const { syncKnownProductCollections } = await import("./stock-sync.js?v=2");
+    await syncKnownProductCollections(window);
+  } catch (error) {
+    console.error("Stock sync initialization failed.", error);
+  }
+}
+
+(async () => {
+  await initializeStockSync();
+  renderProducts();
+})();
 
 
