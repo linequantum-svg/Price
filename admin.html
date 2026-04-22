@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Адмінка наявності</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="catalog-demo.css?v=9">
+  <style>
+    .admin-shell {
+      display: grid;
+      gap: 20px;
+    }
+
+    .admin-card {
+      background: linear-gradient(180deg, #fffdf9 0%, #fff7ec 100%);
+      border: 1px solid rgba(239, 127, 26, 0.14);
+      border-radius: 28px;
+      padding: 22px;
+      box-shadow: 0 20px 40px rgba(102, 72, 26, 0.08);
+    }
+
+    .admin-card h2,
+    .admin-card h3,
+    .admin-card p {
+      margin-top: 0;
+    }
+
+    .admin-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 320px minmax(0, 1fr);
+    }
+
+    .admin-form {
+      display: grid;
+      gap: 12px;
+    }
+
+    .admin-form label {
+      display: grid;
+      gap: 6px;
+      font-weight: 700;
+      color: #30261f;
+    }
+
+    .admin-form input,
+    .admin-form select {
+      width: 100%;
+      border-radius: 16px;
+      border: 1px solid rgba(67, 49, 27, 0.12);
+      padding: 13px 14px;
+      font: inherit;
+      background: rgba(255, 255, 255, 0.95);
+    }
+
+    .admin-button {
+      border: none;
+      border-radius: 16px;
+      padding: 13px 18px;
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+      background: linear-gradient(135deg, #ef7f1a 0%, #ffb24d 100%);
+      color: #1d140a;
+      box-shadow: 0 14px 28px rgba(239, 127, 26, 0.22);
+    }
+
+    .admin-button.is-secondary {
+      background: #f4ede4;
+      color: #34281b;
+      box-shadow: none;
+      border: 1px solid rgba(67, 49, 27, 0.1);
+    }
+
+    .admin-button:disabled,
+    .availability-toggle:disabled {
+      opacity: 0.55;
+      cursor: wait;
+    }
+
+    .admin-toolbar {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: minmax(0, 1.5fr) minmax(180px, 0.8fr) minmax(180px, 0.8fr);
+      align-items: end;
+    }
+
+    .status-note {
+      margin: 0;
+      color: #6a5d4d;
+      line-height: 1.55;
+    }
+
+    .status-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-weight: 800;
+      font-size: 0.92rem;
+    }
+
+    .status-pill.is-live {
+      background: #e5f7ea;
+      color: #216738;
+    }
+
+    .status-pill.is-offline {
+      background: #fff1df;
+      color: #8a4d12;
+    }
+
+    .status-pill.is-muted {
+      background: #f2efe9;
+      color: #655b51;
+    }
+
+    .admin-products {
+      display: grid;
+      gap: 14px;
+    }
+
+    .admin-product {
+      display: grid;
+      gap: 14px;
+      grid-template-columns: minmax(0, 1fr) 220px;
+      align-items: center;
+      padding: 18px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(62, 47, 33, 0.08);
+    }
+
+    .admin-product h3 {
+      margin: 0 0 6px;
+      font-size: 1rem;
+    }
+
+    .admin-product-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .admin-chip {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      background: #f5efe6;
+      color: #534739;
+    }
+
+    .admin-chip.is-current {
+      background: #e8f7ee;
+      color: #205f37;
+    }
+
+    .admin-chip.is-out {
+      background: #fde9e5;
+      color: #8b3d31;
+    }
+
+    .availability-toggle {
+      width: 100%;
+      border-radius: 16px;
+      border: 1px solid rgba(67, 49, 27, 0.12);
+      padding: 12px 14px;
+      font: inherit;
+      background: white;
+    }
+
+    .admin-message {
+      margin: 0;
+      min-height: 24px;
+      color: #5f5445;
+      font-weight: 600;
+    }
+
+    .admin-message.is-error {
+      color: #a33624;
+    }
+
+    .admin-message.is-success {
+      color: #216738;
+    }
+
+    .admin-empty {
+      padding: 24px;
+      text-align: center;
+      color: #6d6254;
+      border: 1px dashed rgba(67, 49, 27, 0.16);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    @media (max-width: 1100px) {
+      .admin-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .admin-toolbar {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .admin-card {
+        padding: 18px;
+        border-radius: 22px;
+      }
+
+      .admin-product {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <div class="brand-block">
+        <h1>Адмінка наявності</h1>
+        <p class="brand-category">Керування статусами "В наявності" / "Немає в наявності"</p>
+      </div>
+    </header>
+
+    <section class="admin-shell">
+      <div class="admin-card">
+        <h2>Стан підключення</h2>
+        <p class="status-note" id="connectionNote">
+          Перевіряю конфігурацію Firebase і доступ до колекції статусів.
+        </p>
+        <div class="status-pill-row">
+          <span class="status-pill is-muted" id="firebaseState">Підготовка…</span>
+          <span class="status-pill is-muted" id="authState">Не авторизовано</span>
+        </div>
+      </div>
+
+      <section class="admin-grid">
+        <aside class="admin-card">
+          <h2>Вхід</h2>
+          <p class="status-note">
+            Увійди через Firebase Auth, щоб змінювати статус товарів. Реєстрацію нового користувача краще зробити в консолі Firebase.
+          </p>
+
+          <form id="loginForm" class="admin-form">
+            <label>
+              Email
+              <input id="emailInput" type="email" autocomplete="username" placeholder="you@example.com" required>
+            </label>
+            <label>
+              Пароль
+              <input id="passwordInput" type="password" autocomplete="current-password" placeholder="Пароль" required>
+            </label>
+            <button class="admin-button" id="loginButton" type="submit">Увійти</button>
+          </form>
+
+          <div id="sessionPanel" hidden>
+            <p class="status-note" id="sessionEmail">Увійшов як …</p>
+            <button class="admin-button is-secondary" id="logoutButton" type="button">Вийти</button>
+          </div>
+
+          <p class="admin-message" id="authMessage"></p>
+        </aside>
+
+        <section class="admin-card">
+          <h2>Товари</h2>
+          <p class="status-note">
+            Список збирається з локальних файлів каталогу, а актуальні статуси підтягуються з Firestore.
+          </p>
+
+          <div class="admin-toolbar">
+            <label class="admin-form">
+              Пошук
+              <input id="searchInput" type="search" placeholder="Назва або категорія">
+            </label>
+            <label class="admin-form">
+              Категорія
+              <select id="categoryFilter">
+                <option value="">Усі категорії</option>
+              </select>
+            </label>
+            <label class="admin-form">
+              Показати
+              <select id="availabilityFilter">
+                <option value="">Усі статуси</option>
+                <option value="В наявності">Тільки в наявності</option>
+                <option value="Немає в наявності">Тільки немає в наявності</option>
+              </select>
+            </label>
+          </div>
+
+          <p class="admin-message" id="productsMessage"></p>
+          <div class="admin-products" id="productsList"></div>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="olevs-data.js"></script>
+  <script src="markers-data.js?v=3"></script>
+  <script src="complects-data.js"></script>
+  <script src="smartwatches-data.js?v=45"></script>
+  <script src="kids-smartwatches-data.js?v=45"></script>
+  <script src="wireless-headphones-data.js?v=4"></script>
+  <script src="over-ear-headphones-data.js"></script>
+  <script src="cases-data.js?v=5"></script>
+  <script src="phone-cases-data.js?v=1"></script>
+  <script src="lighting-data.js?v=7"></script>
+  <script src="adapters-data.js?v=3"></script>
+  <script src="powerbanks-data.js?v=4"></script>
+  <script src="skmei-data.js?v=2"></script>
+  <script src="straps-data.js?v=1"></script>
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
