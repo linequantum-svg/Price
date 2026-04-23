@@ -3,8 +3,8 @@ const miceProducts = [
     name: "Ігрова компьютерная Мишка Gaming 6 кнопок для професійних гравців в оригінальній подарунковій упаковці",
     category: "Комп'ютерні мишки",
     drop: "150 грн",
-    opt: "3,50$",
-    bulk: "3,50$",
+    opt: "3,5$",
+    bulk: "3,5$",
     image: "https://images.prom.ua/5857684400_w640_h640_igrovaya-kompyuternaya-myshka.jpg",
     availability: "В наявності"
   },
