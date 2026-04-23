@@ -702,6 +702,13 @@ button {
   width: 100%;
 }
 
+.mice-category-page .product-heading {
+  min-height: 132px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .availability-link,
 .ghost-note {
   display: inline-flex;
@@ -949,6 +956,10 @@ button {
 
   .product-actions {
     gap: 6px;
+  }
+
+  .mice-category-page .product-heading {
+    min-height: 98px;
   }
 
   .availability-link,
