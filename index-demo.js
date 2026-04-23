@@ -32,7 +32,7 @@ const categoryPhotoFolderUrls = {
   "Павербанки, зарядні пристрої": "https://drive.google.com/drive/folders/1s7LYi9A2hD2Z3N9dcYqA5EEylYCD4MWc",
   "Годинники Skmei": "https://drive.google.com/drive/folders/16hmFwuw-bINqC3WVNSHGRzbyusUUjXGD",
   "Ремінці": "https://drive.google.com/drive/folders/1xuOtVHts5lBlode_keZi_u_tgc1LAQ5E",
-  "Комп'ютерні мишки": "https://do-bro.prom.ua/ua/g83036126-kompyuternye-myshki"
+  "Комп'ютерні мишки": "https://drive.google.com/drive/folders/1bQg8OHUSBIcFtjqYyG5_YqH4qXCMrVZ_"
 };
 
 const allProducts = [

@@ -8,7 +8,7 @@ const itemsCount = document.querySelector("#itemsCount");
 const availableCount = document.querySelector("#availableCount");
 const priceRange = document.querySelector("#priceRange");
 const resultsCount = document.querySelector("#resultsCount");
-const MICE_PHOTO_URL = "https://do-bro.prom.ua/ua/g83036126-kompyuternye-myshki";
+const MICE_PHOTO_URL = "https://drive.google.com/drive/folders/1bQg8OHUSBIcFtjqYyG5_YqH4qXCMrVZ_";
 
 const AVAILABLE_LABEL = "В наявності";
 const POSITIONS_LABEL = "позицій";
