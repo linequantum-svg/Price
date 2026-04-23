@@ -1,4 +1,4 @@
-﻿const OVER_EAR_PHOTO_URL = "https://drive.google.com/drive/folders/1sAdgP63i4HGtvK2jFLGIHm9i5hhAyJbu";
+const OVER_EAR_PHOTO_URL = "https://drive.google.com/drive/folders/1sAdgP63i4HGtvK2jFLGIHm9i5hhAyJbu";
 const searchInput = document.querySelector("#searchInput");
 const clearButton = document.querySelector("#clearSearch");
 const availabilitySort = document.querySelector("#availabilitySort");
@@ -38,7 +38,8 @@ const allProducts = [
   ...adaptersProducts,
   ...powerbanksProducts,
   ...skmeiProducts,
-  ...strapsProducts
+  ...strapsProducts,
+  ...miceProducts
 ];
 
 const parsePriceValue = (value) => {

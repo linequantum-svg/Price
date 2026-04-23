@@ -1,4 +1,4 @@
-﻿const searchInput = document.querySelector("#searchInput");
+const searchInput = document.querySelector("#searchInput");
 const clearButton = document.querySelector("#clearSearch");
 const availabilitySort = document.querySelector("#availabilitySort");
 const priceSort = document.querySelector("#priceSort");
@@ -38,7 +38,8 @@ const allProducts = [
   ...currentCategoryProducts,
   ...getProducts(typeof powerbanksProducts !== "undefined" ? powerbanksProducts : []),
   ...getProducts(typeof skmeiProducts !== "undefined" ? skmeiProducts : []),
-  ...getProducts(typeof strapsProducts !== "undefined" ? strapsProducts : [])
+  ...getProducts(typeof strapsProducts !== "undefined" ? strapsProducts : []),
+  ...getProducts(typeof miceProducts !== "undefined" ? miceProducts : [])
 ];
 
 const parsePriceValue = (value) => {

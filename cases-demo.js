@@ -1,4 +1,4 @@
-﻿const searchInput = document.querySelector("#searchInput");
+const searchInput = document.querySelector("#searchInput");
 const clearButton = document.querySelector("#clearSearch");
 const availabilitySort = document.querySelector("#availabilitySort");
 const priceSort = document.querySelector("#priceSort");
@@ -30,7 +30,8 @@ const allProducts = [
   ...adaptersProducts,
   ...powerbanksProducts,
   ...skmeiProducts,
-  ...strapsProducts
+  ...strapsProducts,
+  ...miceProducts
 ];
 
 const parsePriceValue = (value) => {

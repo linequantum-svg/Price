@@ -8,13 +8,13 @@ const itemsCount = document.querySelector("#itemsCount");
 const availableCount = document.querySelector("#availableCount");
 const priceRange = document.querySelector("#priceRange");
 const resultsCount = document.querySelector("#resultsCount");
+const MICE_PHOTO_URL = "https://do-bro.prom.ua/ua/g83036126-kompyuternye-myshki";
+
 const AVAILABLE_LABEL = "В наявності";
 const POSITIONS_LABEL = "позицій";
 const CURRENCY_UAH = "грн";
-const PHONE_CASES_CATEGORY_LABEL = "Чохли для телефонів";
-const PHONE_CASES_PHOTO_URL = "https://drive.google.com/drive/folders/1H1OiqQ0n2qgpWKtooPwmRAbsv6l6dRfd";
 
-const currentCategoryProducts = phoneCasesProducts;
+const currentCategoryProducts = miceProducts;
 const allProducts = [
   ...olevsProducts,
   ...markersProducts,
@@ -50,32 +50,6 @@ const normalizeQuery = (value) =>
 
 const formatCount = (count) => `${count} ${POSITIONS_LABEL}`;
 
-const sortProducts = (products) => {
-  const availabilityMode = availabilitySort.value;
-  const priceMode = priceSort.value;
-  const orderMap = { "В наявності": 0, "Немає в наявності": 1, "Немає в наявності": 2 };
-
-  return [...products].sort((a, b) => {
-    if (availabilityMode !== "default") {
-      const aRank = orderMap[a.availability] ?? 99;
-      const bRank = orderMap[b.availability] ?? 99;
-      if (aRank !== bRank) {
-        return availabilityMode === "available-first" ? aRank - bRank : bRank - aRank;
-      }
-    }
-
-    if (priceMode !== "default") {
-      const aPrice = parsePriceValue(a.drop);
-      const bPrice = parsePriceValue(b.drop);
-      if (aPrice !== bPrice) {
-        return priceMode === "drop-asc" ? aPrice - bPrice : bPrice - aPrice;
-      }
-    }
-
-    return 0;
-  });
-};
-
 const buildCard = (product) => {
   const card = document.createElement("article");
   card.className = "product-card";
@@ -92,7 +66,7 @@ const buildCard = (product) => {
     <div class="product-body">
       <div class="product-heading">
         <h3 class="product-title">${product.name}</h3>
-        <div class="product-subtitle">${PHONE_CASES_CATEGORY_LABEL}</div>
+        <div class="product-subtitle">${product.category}</div>
       </div>
       <div class="prices">
         <div class="price-box">
@@ -106,7 +80,7 @@ const buildCard = (product) => {
       </div>
       <div class="product-actions">
         <span class="availability-link ${product.availability === AVAILABLE_LABEL ? "is-available" : "is-unavailable"}">${product.availability}</span>
-        <a class="ghost-note" href="${PHONE_CASES_PHOTO_URL}" target="_blank" rel="noreferrer">Фото</a>
+        <a class="ghost-note" href="${MICE_PHOTO_URL}" target="_blank" rel="noreferrer">Фото</a>
       </div>
     </div>
   `;
@@ -134,14 +108,29 @@ const updateStats = (products) => {
 const renderProducts = () => {
   const query = normalizeQuery(searchInput.value);
   const source = query ? allProducts : currentCategoryProducts;
-  const filtered = source.filter((product) =>
+  let filtered = source.filter((product) =>
     normalizeQuery(`${product.name} ${product.category}`).includes(query)
   );
-  const sorted = sortProducts(filtered);
 
-  productGrid.replaceChildren(...sorted.map(buildCard));
-  emptyState.hidden = sorted.length !== 0;
-  updateStats(sorted);
+  if (availabilitySort.value === "available-first") {
+    filtered = filtered.sort((a, b) =>
+      Number(b.availability === AVAILABLE_LABEL) - Number(a.availability === AVAILABLE_LABEL)
+    );
+  } else if (availabilitySort.value === "unavailable-first") {
+    filtered = filtered.sort((a, b) =>
+      Number(a.availability === AVAILABLE_LABEL) - Number(b.availability === AVAILABLE_LABEL)
+    );
+  }
+
+  if (priceSort.value === "drop-asc") {
+    filtered = filtered.sort((a, b) => parsePriceValue(a.drop) - parsePriceValue(b.drop));
+  } else if (priceSort.value === "drop-desc") {
+    filtered = filtered.sort((a, b) => parsePriceValue(b.drop) - parsePriceValue(a.drop));
+  }
+
+  productGrid.replaceChildren(...filtered.map(buildCard));
+  emptyState.hidden = filtered.length !== 0;
+  updateStats(filtered);
 };
 
 searchInput.addEventListener("input", renderProducts);
@@ -156,7 +145,7 @@ priceSort.addEventListener("change", renderProducts);
 
 async function initializeStockSync() {
   try {
-    const { syncKnownProductCollections } = await import("./stock-sync.js?v=2");
+    const { syncKnownProductCollections } = await import("./stock-sync.js?v=3");
     await syncKnownProductCollections(window);
   } catch (error) {
     console.error("Stock sync initialization failed.", error);
@@ -167,5 +156,3 @@ async function initializeStockSync() {
   await initializeStockSync();
   renderProducts();
 })();
-
-

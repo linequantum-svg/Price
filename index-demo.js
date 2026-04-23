@@ -31,7 +31,8 @@ const categoryPhotoFolderUrls = {
   "Адаптери": "https://drive.google.com/drive/folders/1Y8mUsDt-15TbTN--cvaudPC1OIDEVnSP",
   "Павербанки, зарядні пристрої": "https://drive.google.com/drive/folders/1s7LYi9A2hD2Z3N9dcYqA5EEylYCD4MWc",
   "Годинники Skmei": "https://drive.google.com/drive/folders/16hmFwuw-bINqC3WVNSHGRzbyusUUjXGD",
-  "Ремінці": "https://drive.google.com/drive/folders/1xuOtVHts5lBlode_keZi_u_tgc1LAQ5E"
+  "Ремінці": "https://drive.google.com/drive/folders/1xuOtVHts5lBlode_keZi_u_tgc1LAQ5E",
+  "Комп'ютерні мишки": "https://do-bro.prom.ua/ua/g83036126-kompyuternye-myshki"
 };
 
 const allProducts = [
@@ -48,7 +49,8 @@ const allProducts = [
   ...adaptersProducts,
   ...powerbanksProducts,
   ...skmeiProducts,
-  ...strapsProducts
+  ...strapsProducts,
+  ...miceProducts
 ];
 
 function normalize(value) {

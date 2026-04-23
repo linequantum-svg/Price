@@ -1,4 +1,4 @@
-﻿const productGrid = document.getElementById("productGrid");
+const productGrid = document.getElementById("productGrid");
 const searchInput = document.getElementById("searchInput");
 const clearSearchButton = document.getElementById("clearSearch");
 const availabilitySort = document.getElementById("availabilitySort");
@@ -33,7 +33,8 @@ const allProducts = [...olevsProducts, ...markersProducts, ...complectsProducts,
   ...phoneCasesProducts, ...lightingProducts, ...adaptersProducts,
   ...powerbanksProducts,
   ...skmeiProducts,
-  ...strapsProducts];
+  ...strapsProducts,
+  ...miceProducts];
 const categoryPhotoFolderUrls = {
   [OLEVS_CATEGORY]: "https://drive.google.com/drive/folders/1zEVL5BXCgh3jEJ1Cq_iQG7XjFvkpXS_T",
   [CURRENT_CATEGORY]: "https://drive.google.com/drive/folders/1xJrjvroaG9CQ9HZPx7u0rt4PrLmPzExS",

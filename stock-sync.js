@@ -37,7 +37,8 @@ const PRODUCT_COLLECTION_NAMES = [
   "adaptersProducts",
   "powerbanksProducts",
   "skmeiProducts",
-  "strapsProducts"
+  "strapsProducts",
+  "miceProducts"
 ];
 
 let firebaseAppInstance = null;
