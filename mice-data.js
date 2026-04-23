@@ -9,7 +9,7 @@ const miceProducts = [
     availability: "В наявності"
   },
   {
-    name: "Мишка Ігрова M1 M1",
+    name: "Мишка Ігрова M1",
     category: "Комп'ютерні мишки",
     drop: "170 грн",
     opt: "3,8$",

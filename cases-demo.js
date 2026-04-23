@@ -51,6 +51,22 @@ const normalizeQuery = (value) =>
 
 const formatCount = (count) => `${count} ${POSITIONS_LABEL}`;
 
+const formatCaseTitle = (product) => {
+  const name = String(product.name || "").trim();
+
+  if (product.category !== "Чохли") {
+    return name;
+  }
+
+  const parts = name.split(/\s+/);
+
+  if (parts.length <= 2) {
+    return name;
+  }
+
+  return `${parts.slice(0, 2).join(" ")}<br>${parts.slice(2).join(" ")}`;
+};
+
 const sortProducts = (products) => {
   const availabilityMode = availabilitySort.value;
   const priceMode = priceSort.value;
@@ -89,10 +105,10 @@ const buildCard = (product) => {
   card.innerHTML = `
     <div class="${mediaClassName}">
       ${mediaMarkup}
-    </div>
-    <div class="product-body">
-      <div class="product-heading">
-        <h3 class="product-title">${product.name}</h3>
+      </div>
+      <div class="product-body">
+        <div class="product-heading">
+        <h3 class="product-title">${formatCaseTitle(product)}</h3>
         <div class="product-subtitle">${CASES_CATEGORY_LABEL}</div>
       </div>
       <div class="prices">
@@ -112,6 +128,66 @@ const buildCard = (product) => {
     </div>
   `;
   return card;
+};
+
+const getCaseGroupName = (product) => {
+  const name = String(product.name || "");
+
+  if (name.includes("Air2")) return "Чохол Air2";
+  if (name.includes("Air3")) return "Чохол Air3";
+  if (name.includes("Pro2")) return "Чохол Pro2";
+  if (name.includes("Pro3")) return "Чохол Pro3";
+  if (name.includes("Air4")) return "Чохол Air4";
+  if (name.includes("Чохол Pro")) return "Чохол Pro";
+
+  return "Інші чохли";
+};
+
+const caseGroupOrder = [
+  "Чохол Air2",
+  "Чохол Air3",
+  "Чохол Air4",
+  "Чохол Pro",
+  "Чохол Pro2",
+  "Чохол Pro3",
+  "Інші чохли"
+];
+
+const buildProductGroup = (groupName, products) => {
+  const section = document.createElement("section");
+  section.className = "product-group";
+
+  const heading = document.createElement("div");
+  heading.className = "product-group-head";
+  heading.innerHTML = `
+    <h3>${groupName}</h3>
+    <span>${products.length} ${POSITIONS_LABEL}</span>
+  `;
+
+  const groupGrid = document.createElement("div");
+  groupGrid.className = "product-group-grid";
+  groupGrid.replaceChildren(...products.map(buildCard));
+
+  section.replaceChildren(heading, groupGrid);
+  return section;
+};
+
+const buildGroupedProducts = (products) => {
+  const groups = new Map();
+
+  products.forEach((product) => {
+    const groupName = getCaseGroupName(product);
+
+    if (!groups.has(groupName)) {
+      groups.set(groupName, []);
+    }
+
+    groups.get(groupName).push(product);
+  });
+
+  return caseGroupOrder
+    .filter((groupName) => groups.has(groupName))
+    .map((groupName) => buildProductGroup(groupName, groups.get(groupName)));
 };
 
 const updateStats = (products) => {
@@ -140,7 +216,8 @@ const renderProducts = () => {
   );
   const sorted = sortProducts(filtered);
 
-  productGrid.replaceChildren(...sorted.map(buildCard));
+  productGrid.classList.toggle("is-grouped", !query);
+  productGrid.replaceChildren(...(!query ? buildGroupedProducts(sorted) : sorted.map(buildCard)));
   emptyState.hidden = sorted.length !== 0;
   updateStats(sorted);
 };
