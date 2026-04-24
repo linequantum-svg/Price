@@ -698,6 +698,14 @@ button {
   min-height: 2.2em;
 }
 
+.product-title-meta {
+  display: inline-block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.9em;
+  font-weight: 700;
+}
+
 .product-subtitle {
   color: var(--muted);
   font-size: 12px;

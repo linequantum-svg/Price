@@ -50,6 +50,45 @@ const normalizeQuery = (value) =>
 
 const formatCount = (count) => `${count} ${POSITIONS_LABEL}`;
 
+const getStrapVariantLine = (product) => {
+  const name = String(product.name || "").trim();
+  const bracketMatch = name.match(/\(([^)]+)\)\s*$/);
+
+  if (bracketMatch) {
+    return bracketMatch[1].trim();
+  }
+
+  const numberMatch = name.match(/(№\s*\d+)\s*$/i);
+  return numberMatch ? numberMatch[1].trim() : "";
+};
+
+const getStrapBaseName = (product) => {
+  const name = String(product.name || "").trim();
+
+  if (/\([^)]+\)\s*$/.test(name)) {
+    return name.replace(/\s*\([^)]+\)\s*$/, "").trim();
+  }
+
+  if (/№\s*\d+\s*$/i.test(name)) {
+    return name.replace(/\s*№\s*\d+\s*$/i, "").trim();
+  }
+
+  return name;
+};
+
+const formatStrapTitle = (product) => {
+  const baseName = getStrapBaseName(product);
+  const variantLine = getStrapVariantLine(product);
+
+  if (!variantLine) {
+    return baseName;
+  }
+
+  return `${baseName}<br><span class="product-title-meta">${variantLine}</span>`;
+};
+
+const getStrapGroupName = (product) => getStrapBaseName(product);
+
 const sortProducts = (products) => {
   const availabilityMode = availabilitySort.value;
   const priceMode = priceSort.value;
@@ -91,7 +130,7 @@ const buildCard = (product) => {
     </div>
     <div class="product-body">
       <div class="product-heading">
-        <h3 class="product-title">${product.name}</h3>
+        <h3 class="product-title">${formatStrapTitle(product)}</h3>
         <div class="product-subtitle">${product.category}</div>
       </div>
       <div class="prices">
@@ -111,6 +150,43 @@ const buildCard = (product) => {
     </div>
   `;
   return card;
+};
+
+const buildProductGroup = (groupName, products) => {
+  const section = document.createElement("section");
+  section.className = "product-group";
+
+  const heading = document.createElement("div");
+  heading.className = "product-group-head";
+  heading.innerHTML = `
+    <h3>${groupName}</h3>
+    <span>${products.length} ${POSITIONS_LABEL}</span>
+  `;
+
+  const groupGrid = document.createElement("div");
+  groupGrid.className = "product-group-grid";
+  groupGrid.replaceChildren(...products.map(buildCard));
+
+  section.replaceChildren(heading, groupGrid);
+  return section;
+};
+
+const buildGroupedProducts = (products) => {
+  const groups = new Map();
+
+  products.forEach((product) => {
+    const groupName = getStrapGroupName(product);
+
+    if (!groups.has(groupName)) {
+      groups.set(groupName, []);
+    }
+
+    groups.get(groupName).push(product);
+  });
+
+  return [...groups.entries()].map(([groupName, groupProducts]) =>
+    buildProductGroup(groupName, groupProducts)
+  );
 };
 
 const updateStats = (products) => {
@@ -137,7 +213,8 @@ const renderProducts = () => {
   );
   const sorted = sortProducts(filtered);
 
-  productGrid.replaceChildren(...sorted.map(buildCard));
+  productGrid.classList.toggle("is-grouped", !query);
+  productGrid.replaceChildren(...(!query ? buildGroupedProducts(sorted) : sorted.map(buildCard)));
   emptyState.hidden = sorted.length !== 0;
   updateStats(sorted);
 };
