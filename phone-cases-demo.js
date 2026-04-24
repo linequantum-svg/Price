@@ -50,6 +50,50 @@ const normalizeQuery = (value) =>
 
 const formatCount = (count) => `${count} ${POSITIONS_LABEL}`;
 
+const splitPhoneCaseName = (product) => {
+  const originalName = String(product.name || "").trim();
+  const normalizedName = originalName.replace(/\s+/g, " ").trim();
+  const doubleSpaceParts = originalName
+    .split(/\s{2,}/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+  if (doubleSpaceParts.length >= 2) {
+    return {
+      baseName: doubleSpaceParts.slice(0, -1).join(" ").trim(),
+      colorName: doubleSpaceParts.at(-1)
+    };
+  }
+
+  const parts = normalizedName.split(" ");
+
+  if (parts.length >= 2) {
+    return {
+      baseName: parts.slice(0, -1).join(" ").trim(),
+      colorName: parts.at(-1)
+    };
+  }
+
+  return {
+    baseName: normalizedName,
+    colorName: ""
+  };
+};
+
+const getPhoneCaseBaseName = (product) => splitPhoneCaseName(product).baseName;
+const getPhoneCaseColorName = (product) => splitPhoneCaseName(product).colorName;
+
+const formatPhoneCaseTitle = (product) => {
+  const baseName = getPhoneCaseBaseName(product);
+  const colorName = getPhoneCaseColorName(product);
+
+  if (!colorName) {
+    return baseName;
+  }
+
+  return `${baseName}<br><span class="product-title-meta">${colorName}</span>`;
+};
+
 const sortProducts = (products) => {
   const availabilityMode = availabilitySort.value;
   const priceMode = priceSort.value;
@@ -91,7 +135,7 @@ const buildCard = (product) => {
     </div>
     <div class="product-body">
       <div class="product-heading">
-        <h3 class="product-title">${product.name}</h3>
+        <h3 class="product-title">${formatPhoneCaseTitle(product)}</h3>
         <div class="product-subtitle">${PHONE_CASES_CATEGORY_LABEL}</div>
       </div>
       <div class="prices">
@@ -111,6 +155,45 @@ const buildCard = (product) => {
     </div>
   `;
   return card;
+};
+
+const getPhoneCaseGroupName = (product) => getPhoneCaseBaseName(product);
+
+const buildProductGroup = (groupName, products) => {
+  const section = document.createElement("section");
+  section.className = "product-group";
+
+  const heading = document.createElement("div");
+  heading.className = "product-group-head";
+  heading.innerHTML = `
+    <h3>${groupName}</h3>
+    <span>${products.length} ${POSITIONS_LABEL}</span>
+  `;
+
+  const groupGrid = document.createElement("div");
+  groupGrid.className = "product-group-grid";
+  groupGrid.replaceChildren(...products.map(buildCard));
+
+  section.replaceChildren(heading, groupGrid);
+  return section;
+};
+
+const buildGroupedProducts = (products) => {
+  const groups = new Map();
+
+  products.forEach((product) => {
+    const groupName = getPhoneCaseGroupName(product);
+
+    if (!groups.has(groupName)) {
+      groups.set(groupName, []);
+    }
+
+    groups.get(groupName).push(product);
+  });
+
+  return [...groups.entries()].map(([groupName, groupProducts]) =>
+    buildProductGroup(groupName, groupProducts)
+  );
 };
 
 const updateStats = (products) => {
@@ -139,7 +222,8 @@ const renderProducts = () => {
   );
   const sorted = sortProducts(filtered);
 
-  productGrid.replaceChildren(...sorted.map(buildCard));
+  productGrid.classList.toggle("is-grouped", !query);
+  productGrid.replaceChildren(...(!query ? buildGroupedProducts(sorted) : sorted.map(buildCard)));
   emptyState.hidden = sorted.length !== 0;
   updateStats(sorted);
 };
