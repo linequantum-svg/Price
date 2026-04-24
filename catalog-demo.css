@@ -838,8 +838,8 @@ body.lightbox-open {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 64px;
-  padding: 9px 12px;
+  height: 54px;
+  padding: 7px 12px;
   border-radius: 14px;
   font-size: 13px;
   font-weight: 800;
@@ -1118,8 +1118,8 @@ body.lightbox-open {
 
   .availability-link,
   .ghost-note {
-    height: 58px;
-    padding: 8px 10px;
+    height: 50px;
+    padding: 7px 10px;
     border-radius: 12px;
     font-size: 12px;
   }
