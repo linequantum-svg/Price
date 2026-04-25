@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Адмінка наявності</title>
+  <title>РђРґРјС–РЅРєР° РЅР°СЏРІРЅРѕСЃС‚С–</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
@@ -233,28 +233,28 @@
   <main class="page">
     <header class="topbar">
       <div class="brand-block">
-        <h1>Адмінка наявності</h1>
-        <p class="brand-category">Керування статусами "В наявності" / "Немає в наявності"</p>
+        <h1>РђРґРјС–РЅРєР° РЅР°СЏРІРЅРѕСЃС‚С–</h1>
+        <p class="brand-category">РљРµСЂСѓРІР°РЅРЅСЏ СЃС‚Р°С‚СѓСЃР°РјРё "Р’ РЅР°СЏРІРЅРѕСЃС‚С–" / "РќРµРјР°С” РІ РЅР°СЏРІРЅРѕСЃС‚С–"</p>
       </div>
     </header>
 
     <section class="admin-shell">
       <div class="admin-card">
-        <h2>Стан підключення</h2>
+        <h2>РЎС‚Р°РЅ РїС–РґРєР»СЋС‡РµРЅРЅСЏ</h2>
         <p class="status-note" id="connectionNote">
-          Перевіряю конфігурацію Firebase і доступ до колекції статусів.
+          РџРµСЂРµРІС–СЂСЏСЋ РєРѕРЅС„С–РіСѓСЂР°С†С–СЋ Firebase С– РґРѕСЃС‚СѓРї РґРѕ РєРѕР»РµРєС†С–С— СЃС‚Р°С‚СѓСЃС–РІ.
         </p>
         <div class="status-pill-row">
-          <span class="status-pill is-muted" id="firebaseState">Підготовка…</span>
-          <span class="status-pill is-muted" id="authState">Не авторизовано</span>
+          <span class="status-pill is-muted" id="firebaseState">РџС–РґРіРѕС‚РѕРІРєР°вЂ¦</span>
+          <span class="status-pill is-muted" id="authState">РќРµ Р°РІС‚РѕСЂРёР·РѕРІР°РЅРѕ</span>
         </div>
       </div>
 
       <section class="admin-grid">
         <aside class="admin-card">
-          <h2>Вхід</h2>
+          <h2>Р’С…С–Рґ</h2>
           <p class="status-note">
-            Увійди через Firebase Auth, щоб змінювати статус товарів. Реєстрацію нового користувача краще зробити в консолі Firebase.
+            РЈРІС–Р№РґРё С‡РµСЂРµР· Firebase Auth, С‰РѕР± Р·РјС–РЅСЋРІР°С‚Рё СЃС‚Р°С‚СѓСЃ С‚РѕРІР°СЂС–РІ. Р РµС”СЃС‚СЂР°С†С–СЋ РЅРѕРІРѕРіРѕ РєРѕСЂРёСЃС‚СѓРІР°С‡Р° РєСЂР°С‰Рµ Р·СЂРѕР±РёС‚Рё РІ РєРѕРЅСЃРѕР»С– Firebase.
           </p>
 
           <form id="loginForm" class="admin-form">
@@ -263,43 +263,43 @@
               <input id="emailInput" type="email" autocomplete="username" placeholder="you@example.com" required>
             </label>
             <label>
-              Пароль
-              <input id="passwordInput" type="password" autocomplete="current-password" placeholder="Пароль" required>
+              РџР°СЂРѕР»СЊ
+              <input id="passwordInput" type="password" autocomplete="current-password" placeholder="РџР°СЂРѕР»СЊ" required>
             </label>
-            <button class="admin-button" id="loginButton" type="submit">Увійти</button>
+            <button class="admin-button" id="loginButton" type="submit">РЈРІС–Р№С‚Рё</button>
           </form>
 
           <div id="sessionPanel" hidden>
-            <p class="status-note" id="sessionEmail">Увійшов як …</p>
-            <button class="admin-button is-secondary" id="logoutButton" type="button">Вийти</button>
+            <p class="status-note" id="sessionEmail">РЈРІС–Р№С€РѕРІ СЏРє вЂ¦</p>
+            <button class="admin-button is-secondary" id="logoutButton" type="button">Р’РёР№С‚Рё</button>
           </div>
 
           <p class="admin-message" id="authMessage"></p>
         </aside>
 
         <section class="admin-card">
-          <h2>Товари</h2>
+          <h2>РўРѕРІР°СЂРё</h2>
           <p class="status-note">
-            Список збирається з локальних файлів каталогу, а актуальні статуси підтягуються з Firestore.
+            РЎРїРёСЃРѕРє Р·Р±РёСЂР°С”С‚СЊСЃСЏ Р· Р»РѕРєР°Р»СЊРЅРёС… С„Р°Р№Р»С–РІ РєР°С‚Р°Р»РѕРіСѓ, Р° Р°РєС‚СѓР°Р»СЊРЅС– СЃС‚Р°С‚СѓСЃРё РїС–РґС‚СЏРіСѓСЋС‚СЊСЃСЏ Р· Firestore.
           </p>
 
           <div class="admin-toolbar">
             <label class="admin-form">
-              Пошук
-              <input id="searchInput" type="search" placeholder="Назва або категорія">
+              РџРѕС€СѓРє
+              <input id="searchInput" type="search" placeholder="РќР°Р·РІР° Р°Р±Рѕ РєР°С‚РµРіРѕСЂС–СЏ">
             </label>
             <label class="admin-form">
-              Категорія
+              РљР°С‚РµРіРѕСЂС–СЏ
               <select id="categoryFilter">
-                <option value="">Усі категорії</option>
+                <option value="">РЈСЃС– РєР°С‚РµРіРѕСЂС–С—</option>
               </select>
             </label>
             <label class="admin-form">
-              Показати
+              РџРѕРєР°Р·Р°С‚Рё
               <select id="availabilityFilter">
-                <option value="">Усі статуси</option>
-                <option value="В наявності">Тільки в наявності</option>
-                <option value="Немає в наявності">Тільки немає в наявності</option>
+                <option value="">РЈСЃС– СЃС‚Р°С‚СѓСЃРё</option>
+                <option value="Р’ РЅР°СЏРІРЅРѕСЃС‚С–">РўС–Р»СЊРєРё РІ РЅР°СЏРІРЅРѕСЃС‚С–</option>
+                <option value="РќРµРјР°С” РІ РЅР°СЏРІРЅРѕСЃС‚С–">РўС–Р»СЊРєРё РЅРµРјР°С” РІ РЅР°СЏРІРЅРѕСЃС‚С–</option>
               </select>
             </label>
           </div>
@@ -315,8 +315,8 @@
   <script src="olevs-data.js"></script>
   <script src="markers-data.js?v=3"></script>
   <script src="complects-data.js"></script>
-  <script src="smartwatches-data.js?v=45"></script>
-  <script src="kids-smartwatches-data.js?v=45"></script>
+  <script src="smartwatches-data.js?v=46"></script>
+  <script src="kids-smartwatches-data.js?v=46"></script>
   <script src="wireless-headphones-data.js?v=4"></script>
   <script src="over-ear-headphones-data.js"></script>
   <script src="cases-data.js?v=13"></script>
@@ -330,3 +330,4 @@
   <script type="module" src="admin.js"></script>
 </body>
 </html>
+
