@@ -27,7 +27,7 @@
   {"name":"M28 Чорні","category":"????????? TWS","drop":"200 грн","opt":"4$","bulk":"4$","image":"images/wireless-headphones/m28-user-prom.jpg","availability":"В наявності"},
   {"name":"Air31 білі","category":"????????? TWS","drop":"140 грн","opt":"2,7$","bulk":"2,7$","image":"images/wireless-headphones/air31-white-prom.jpg","availability":"В наявності"},
   {"name":"Air31 чорні","category":"????????? TWS","drop":"140 грн","opt":"2,7$","bulk":"2,7$","image":"images/wireless-headphones/air31-black-prom.jpg","availability":"В наявності"},
-  {"name":"Air31 рожеві","category":"????????? TWS","drop":"140 грн","opt":"2,7$","bulk":"2,7$","image":"images/wireless-headphones/air31-pink-prom.jpg","availability":"Немає в наявності"},
+  {"name":"Air31 рожеві","category":"????????? TWS","drop":"140 грн","opt":"2,7$","bulk":"2,7$","image":"images/wireless-headphones/air31-pink-prom.jpg","availability":"В наявності"},
   {"name":"Air31 сині","category":"????????? TWS","drop":"140 грн","opt":"2,7$","bulk":"2,7$","image":"images/wireless-headphones/air31-blue-prom.jpg","availability":"Немає в наявності"},
   {"name":"Air31 зелені","category":"????????? TWS","drop":"140 грн","opt":"2,7$","bulk":"2,7$","image":"images/wireless-headphones/air31-green-prom.jpg","availability":"Немає в наявності"},
   {"name":"Air3 Macaroon Білий","category":"????????? TWS","drop":"200 грн","opt":"4$","bulk":"4$","image":"","availability":"Немає в наявності"},
