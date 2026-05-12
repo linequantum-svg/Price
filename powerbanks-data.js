@@ -87,7 +87,7 @@
     opt: "11$",
     bulk: "11$",
     image: "images/powerbanks/powerbank-20000-white.jpg",
-    availability: "Немає в наявності"
+    availability: "В наявності"
   },
   {
     name: "Павербанк 20000 kj-C20 Чорний",
@@ -96,7 +96,7 @@
     opt: "11$",
     bulk: "11$",
     image: "images/powerbanks/powerbank-20000-black.jpg",
-    availability: "Немає в наявності"
+    availability: "В наявності"
   },
   {
     name: "Павербанк 20000 kj-C20 Бузковий",
@@ -105,7 +105,7 @@
     opt: "11$",
     bulk: "11$",
     image: "images/powerbanks/powerbank-20000-lilac.jpg",
-    availability: "Немає в наявності"
+    availability: "В наявності"
   },
   {
     name: "Павербанк 20000 kj-C20 Рожевий",
@@ -114,7 +114,7 @@
     opt: "11$",
     bulk: "11$",
     image: "images/powerbanks/powerbank-20000-pink-v2.jpg",
-    availability: "Немає в наявності"
+    availability: "В наявності"
   },
   {
     name: "Павербанк 30000 C20 Чорний",
@@ -123,7 +123,7 @@
     opt: "13$",
     bulk: "13$",
     image: "images/powerbanks/powerbank-30000-black.jpg",
-    availability: "Немає в наявності"
+    availability: "В наявності"
   },
   {
     name: "Павербанк 30000 C20 Білий",
@@ -132,7 +132,7 @@
     opt: "13$",
     bulk: "13$",
     image: "images/powerbanks/powerbank-30000-white.jpg",
-    availability: "Немає в наявності"
+    availability: "В наявності"
   },
   {
     name: "Павербанк 30000 C20 Рожевий",
@@ -141,7 +141,7 @@
     opt: "13$",
     bulk: "13$",
     image: "images/powerbanks/powerbank-30000-pink.jpg",
-    availability: "Немає в наявності"
+    availability: "В наявності"
   },
   {
     name: "Павербанк 30000 C20 Бузьковий",
@@ -150,7 +150,7 @@
     opt: "13$",
     bulk: "13$",
     image: "images/powerbanks/powerbank-30000-lilac.jpg",
-    availability: "Немає в наявності"
+    availability: "В наявності"
   },
   {
     name: "Бездротове зарядне Fantasy",
