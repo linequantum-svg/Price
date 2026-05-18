@@ -105,7 +105,7 @@
     opt: "7$",
     bulk: "7$",
     image: "",
-    availability: "В наявності"
+    availability: "Немає в наявності"
   },
   {
     name: "Павербанк 10000 kj-215 Чорний",
