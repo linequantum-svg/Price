@@ -54,7 +54,7 @@
   {"name":"Pro Macaroon Рожевий","category":"????????? TWS","drop":"200 грн","opt":"4$","bulk":"4$","image":"images/wireless-headphones/pro-macaroon-pink-prom.jpg","availability":"В наявності"},
   {"name":"Pro Macaroon Синій","category":"????????? TWS","drop":"200 грн","opt":"4$","bulk":"4$","image":"images/wireless-headphones/pro-macaroon-blue-prom.jpg","availability":"Немає в наявності"},
   {"name":"Pro Macaroon Зелений","category":"????????? TWS","drop":"200 грн","opt":"4$","bulk":"4$","image":"images/wireless-headphones/pro-macaroon-green-prom.jpg","availability":"Немає в наявності"},
-  {"name":"Pro Macaroon Жовтий","category":"????????? TWS","drop":"200 грн","opt":"4$","bulk":"4$","image":"images/wireless-headphones/pro-macaroon-yellow-prom.jpg","availability":"В наявності"},
+  {"name":"Pro Macaroon Жовтий","category":"????????? TWS","drop":"200 грн","opt":"4$","bulk":"4$","image":"images/wireless-headphones/pro-macaroon-yellow-prom.jpg","availability":"Немає в наявності"},
   {"name":"E7S Чорний","category":"????????? TWS","drop":"230 грн","opt":"5$","bulk":"5$","image":"images/wireless-headphones/e7s-black-prom.jpg","availability":"В наявності"},
   {"name":"E7S Рожевий","category":"????????? TWS","drop":"230 грн","opt":"5$","bulk":"5$","image":"images/wireless-headphones/e7s-pink-prom.jpg","availability":"В наявності"},
   {"name":"E7S Білий","category":"????????? TWS","drop":"230 грн","opt":"5$","bulk":"5$","image":"images/wireless-headphones/e7s-white-prom.jpg","availability":"В наявності"},

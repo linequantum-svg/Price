@@ -2165,7 +2165,7 @@
     {
         "name":  "Pro Macaroon Жовтий",
         "category":  "Бездротові Навушники",
-        "availability":  "В наявності",
+        "availability":  "Очікуються",
         "opt":  "4",
         "drop":  "200"
     },
