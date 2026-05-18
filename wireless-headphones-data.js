@@ -20,7 +20,7 @@
   {"name":"N35","category":"????????? TWS","drop":"200 грн","opt":"4,5$","bulk":"4,5$","image":"images/wireless-headphones/n35-prom.jpg","availability":"В наявності"},
   {"name":"N21","category":"????????? TWS","drop":"220 грн","opt":"4,9$","bulk":"4,9$","image":"images/wireless-headphones/n21-prom.jpg","availability":"В наявності"},
   {"name":"SP16","category":"????????? TWS","drop":"250 грн","opt":"5,8$","bulk":"5,8$","image":"images/wireless-headphones/sp16-prom.jpg","availability":"Немає в наявності"},
-  {"name":"T7500","category":"????????? TWS","drop":"180 грн","opt":"3,9$","bulk":"3,9$","image":"images/wireless-headphones/t7500-prom.jpg","availability":"В наявності"},
+  {"name":"T7500","category":"????????? TWS","drop":"180 грн","opt":"3,9$","bulk":"3,9$","image":"images/wireless-headphones/t7500-prom.jpg","availability":"Немає в наявності"},
   {"name":"X55","category":"????????? TWS","drop":"120 грн","opt":"2,7$","bulk":"2,7$","image":"images/wireless-headphones/x55-prom.jpg","availability":"В наявності"},
   {"name":"F05","category":"????????? TWS","drop":"290 грн","opt":"6,7$","bulk":"6,7$","image":"images/wireless-headphones/f05-prom.jpg","availability":"В наявності"},
   {"name":"YD03","category":"????????? TWS","drop":"230 грн","opt":"5,1$","bulk":"5,1$","image":"images/wireless-headphones/yd03-prom.jpg","availability":"В наявності"},
