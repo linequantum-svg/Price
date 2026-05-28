@@ -120,36 +120,6 @@ const complectsProducts = [
     availability: "В наявності"
   },
   {
-    name: "Комплект M103 Чорний",
-    category: "Комплекти",
-    drop: "550 грн",
-    opt: "13$",
-    bulk: "13$",
-    image: "images/complects/item-031.png",
-    availabilityUrl: "https://bit.ly/45isFp3",
-    availability: "Немає в наявності"
-  },
-  {
-    name: "Комплект M103 Сірий",
-    category: "Комплекти",
-    drop: "550 грн",
-    opt: "13$",
-    bulk: "13$",
-    image: "images/complects/item-032.png",
-    availabilityUrl: "https://bit.ly/45isFp3",
-    availability: "Немає в наявності"
-  },
-  {
-    name: "Комплект M103 Золотий",
-    category: "Комплекти",
-    drop: "550 грн",
-    opt: "13$",
-    bulk: "13$",
-    image: "images/complects/item-033.png",
-    availabilityUrl: "https://bit.ly/45isFp3",
-    availability: "В наявності"
-  },
-  {
     name: "Комплект WK76 Чорний",
     category: "Комплекти",
     drop: "550 грн",
