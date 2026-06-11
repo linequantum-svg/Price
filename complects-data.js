@@ -150,36 +150,6 @@ const complectsProducts = [
     availability: "В наявності"
   },
   {
-    name: "Комплект Megabox Чорний",
-    category: "Комплекти",
-    drop: "700 грн",
-    opt: "16$",
-    bulk: "16$",
-    image: "images/complects/item-001.png",
-    availabilityUrl: "https://bit.ly/45isFp3",
-    availability: "Немає в наявності"
-  },
-  {
-    name: "Комплект Megabox Білий",
-    category: "Комплекти",
-    drop: "700 грн",
-    opt: "16$",
-    bulk: "16$",
-    image: "images/complects/item-002.png",
-    availabilityUrl: "https://bit.ly/45isFp3",
-    availability: "Немає в наявності"
-  },
-  {
-    name: "Комплект Megabox Рожевий",
-    category: "Комплекти",
-    drop: "700 грн",
-    opt: "16$",
-    bulk: "16$",
-    image: "images/complects/item-003.png",
-    availabilityUrl: "https://bit.ly/45isFp3",
-    availability: "Немає в наявності"
-  },
-  {
     name: "Комплект i50 suit max Чорний",
     category: "Комплекти",
     drop: "600 грн",
