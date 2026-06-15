@@ -2,7 +2,7 @@ const lightingProducts = [
   {
     name: "Світильник Луна 8см",
     category: "Світильники",
-    drop: "220 грн",
+    drop: "225 грн",
     opt: "5$",
     bulk: "5$",
     image: "images/lighting/luna-8-prom.jpg",

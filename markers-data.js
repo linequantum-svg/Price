@@ -162,7 +162,7 @@
   {
     name: "Маркер GuangNa Acrylic Marker GN.7100 24шт",
     category: "Маркери, фломастери",
-    drop: "330 грн",
+    drop: "338 грн",
     opt: "7,5$",
     bulk: "7,5$",
     image: "images/markers/item-017.png",
@@ -232,7 +232,7 @@
   {
     name: "Скетч-маркер 36шт",
     category: "Маркери, фломастери",
-    drop: "110 грн",
+    drop: "113 грн",
     opt: "2,5$",
     bulk: "2,5$",
     image: "images/markers/item-024.png",
