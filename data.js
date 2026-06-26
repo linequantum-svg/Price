@@ -1967,48 +1967,6 @@
         "drop":  "140"
     },
     {
-        "name":  "Air3 Macaroon Білий",
-        "category":  "Бездротові Навушники",
-        "availability":  "Немає в наявності",
-        "opt":  "4",
-        "drop":  "200"
-    },
-    {
-        "name":  "Air3 Macaroon Чорний",
-        "category":  "Бездротові Навушники",
-        "availability":  "Немає в наявності",
-        "opt":  "4",
-        "drop":  "200"
-    },
-    {
-        "name":  "Air3 Macaroon Рожевий",
-        "category":  "Бездротові Навушники",
-        "availability":  "В наявності",
-        "opt":  "4",
-        "drop":  "200"
-    },
-    {
-        "name":  "Air3 Macaroon Синій",
-        "category":  "Бездротові Навушники",
-        "availability":  "Немає в наявності",
-        "opt":  "4",
-        "drop":  "200"
-    },
-    {
-        "name":  "Air3 Macaroon Зелений",
-        "category":  "Бездротові Навушники",
-        "availability":  "Немає в наявності",
-        "opt":  "4",
-        "drop":  "200"
-    },
-    {
-        "name":  "Air3 Macaroon Жовтий",
-        "category":  "Бездротові Навушники",
-        "availability":  "Немає в наявності",
-        "opt":  "4",
-        "drop":  "200"
-    },
-    {
         "name":  "i12 Білий",
         "category":  "Бездротові Навушники",
         "availability":  "Немає в наявності",
