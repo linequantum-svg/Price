@@ -1204,27 +1204,6 @@
         "drop":  "650"
     },
     {
-        "name":  "GS Ultra8 Чорний",
-        "category":  "Смарт-годинники",
-        "availability":  "В наявності",
-        "opt":  "16",
-        "drop":  "700"
-    },
-    {
-        "name":  "GS Ultra8 Помаранчевий",
-        "category":  "Смарт-годинники",
-        "availability":  "В наявності",
-        "opt":  "16",
-        "drop":  "700"
-    },
-    {
-        "name":  "GS Ultra8 Білий",
-        "category":  "Смарт-годинники",
-        "availability":  "В наявності",
-        "opt":  "16",
-        "drop":  "700"
-    },
-    {
         "name":  "GS8+ Ultra Чорний",
         "category":  "Смарт-годинники",
         "availability":  "В наявності",
