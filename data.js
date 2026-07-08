@@ -2044,48 +2044,6 @@
         "drop":  "150"
     },
     {
-        "name":  "Pro Macaroon Білий",
-        "category":  "Бездротові Навушники",
-        "availability":  "Немає в наявності",
-        "opt":  "4",
-        "drop":  "200"
-    },
-    {
-        "name":  "Pro Macaroon Чорний",
-        "category":  "Бездротові Навушники",
-        "availability":  "Немає в наявності",
-        "opt":  "4",
-        "drop":  "200"
-    },
-    {
-        "name":  "Pro Macaroon Рожевий",
-        "category":  "Бездротові Навушники",
-        "availability":  "В наявності",
-        "opt":  "4",
-        "drop":  "200"
-    },
-    {
-        "name":  "Pro Macaroon Синій",
-        "category":  "Бездротові Навушники",
-        "availability":  "Немає в наявності",
-        "opt":  "4",
-        "drop":  "200"
-    },
-    {
-        "name":  "Pro Macaroon Зелений",
-        "category":  "Бездротові Навушники",
-        "availability":  "Немає в наявності",
-        "opt":  "4",
-        "drop":  "200"
-    },
-    {
-        "name":  "Pro Macaroon Жовтий",
-        "category":  "Бездротові Навушники",
-        "availability":  "Очікуються",
-        "opt":  "4",
-        "drop":  "200"
-    },
-    {
         "name":  "E7S Чорний",
         "category":  "Бездротові Навушники",
         "availability":  "В наявності",
