@@ -97,7 +97,7 @@
     bulk: "58$",
     image: "images/markers/item-010.png",
     availabilityUrl: "https://bit.ly/45isFp3",
-    availability: "Немає в наявності"
+    availability: "В наявності"
   },
   {
     name: "Маркер GuangNa Acrylic brush marker GN.8101 240шт",
