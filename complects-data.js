@@ -257,7 +257,7 @@ const complectsProducts = [
     bulk: "8$",
     image: "images/complects/item-014.png",
     availabilityUrl: "https://bit.ly/45isFp3",
-    availability: "Немає в наявності"
+    availability: "В наявності"
   },
   {
     name: "Комплект T55 Pro Max Рожевий",
