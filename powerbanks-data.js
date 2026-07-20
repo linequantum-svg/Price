@@ -42,7 +42,7 @@
     opt: "13$",
     bulk: "13$",
     image: "images/powerbanks/powerbank-30000-black.jpg",
-    availability: "В наявності"
+    availability: "Немає в наявності"
   },
   {
     name: "Павербанк 30000 C20 Білий",
