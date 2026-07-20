@@ -826,34 +826,6 @@
         "drop":  "700"
     },
     {
-        "name":  "GS9mini Чорний",
-        "category":  "Смарт-годинники",
-        "availability":  "В наявності",
-        "opt":  "15",
-        "drop":  "650"
-    },
-    {
-        "name":  "GS9mini Білий",
-        "category":  "Смарт-годинники",
-        "availability":  "Немає в наявності",
-        "opt":  "15",
-        "drop":  "650"
-    },
-    {
-        "name":  "GS9mini Рожевий",
-        "category":  "Смарт-годинники",
-        "availability":  "В наявності",
-        "opt":  "15",
-        "drop":  "650"
-    },
-    {
-        "name":  "GS9mini Золотий",
-        "category":  "Смарт-годинники",
-        "availability":  "Немає в наявності",
-        "opt":  "15",
-        "drop":  "650"
-    },
-    {
         "name":  "S9Max Чорний",
         "category":  "Смарт-годинники",
         "availability":  "В наявності",
