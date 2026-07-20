@@ -159,7 +159,7 @@
     opt: "2$",
     bulk: "2$",
     image: "images/powerbanks/fantasy-wireless-charger-prom-v3.jpg",
-    availability: "В наявності"
+    availability: "Немає в наявності"
   }
 ];
 
