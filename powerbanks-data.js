@@ -24,7 +24,7 @@
     opt: "11$",
     bulk: "11$",
     image: "images/powerbanks/powerbank-20000-lilac.jpg",
-    availability: "В наявності"
+    availability: "Немає в наявності"
   },
   {
     name: "Павербанк 20000 kj-C20 Рожевий",
