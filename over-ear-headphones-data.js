@@ -11,7 +11,6 @@ const overEarHeadphonesProducts = [
   {"name":"Навушники з вушками STN-28 бузкові","category":"Накладні навушники","drop":"250 грн","opt":"5,5$","bulk":"5,5$","image":"images/wireless-headphones/stn28-violet-prom.jpg","availability":"В наявності"},
   {"name":"Навушники з вушками P47M чорні","category":"Накладні навушники","drop":"180 грн","opt":"3,8$","bulk":"3,8$","image":"images/wireless-headphones/p47m-black-prom.jpg","availability":"В наявності"},
   {"name":"Навушники з вушками P47M сині","category":"Накладні навушники","drop":"180 грн","opt":"3,8$","bulk":"3,8$","image":"images/wireless-headphones/p47m-blue-prom.jpg","availability":"В наявності"},
-  {"name":"Навушники з вушками P47M зелені","category":"Накладні навушники","drop":"180 грн","opt":"3,8$","bulk":"3,8$","image":"","availability":"В наявності"},
   {"name":"Навушники з вушками P47M рожеві","category":"Накладні навушники","drop":"180 грн","opt":"3,8$","bulk":"3,8$","image":"images/wireless-headphones/p47m-pink-user-prom.jpg","availability":"В наявності"},
   {"name":"Навушники з вушками P47M сірі","category":"Накладні навушники","drop":"180 грн","opt":"3,8$","bulk":"3,8$","image":"images/wireless-headphones/p47m-gray-user-prom.jpg","availability":"В наявності"},
   {"name":"Навушники з вушками P47M бузькові","category":"Накладні навушники","drop":"180 грн","opt":"3,8$","bulk":"3,8$","image":"images/wireless-headphones/p47m-violet-prom.jpg","availability":"В наявності"},
