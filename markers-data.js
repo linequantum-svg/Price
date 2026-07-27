@@ -317,7 +317,7 @@
     bulk: "8$",
     image: "images/markers/item-030.png",
     availabilityUrl: "https://bit.ly/45isFp3",
-    availability: "В наявності"
+    availability: "Немає в наявності"
   },
   {
     name: "Скетч-маркер 168шт",
