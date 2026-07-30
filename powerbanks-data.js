@@ -69,7 +69,7 @@
     opt: "13$",
     bulk: "13$",
     image: "images/powerbanks/powerbank-30000-lilac.jpg",
-    availability: "В наявності"
+    availability: "Немає в наявності"
   },
   {
     name: "Павербанк 10000 kj-Z23 Білий",
