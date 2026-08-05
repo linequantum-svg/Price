@@ -3,7 +3,7 @@
   {"name":"F9","category":"????????? TWS","drop":"120 грн","opt":"2,5$","bulk":"2,5$","image":"images/wireless-headphones/f9-prom.jpg","availability":"В наявності"},
   {"name":"X15","category":"????????? TWS","drop":"130 грн","opt":"2,7$","bulk":"2,7$","image":"images/wireless-headphones/x15-prom.jpg","availability":"В наявності"},
   {"name":"M10","category":"????????? TWS","drop":"130 грн","opt":"2,7$","bulk":"2,7$","image":"images/wireless-headphones/m10-prom.jpg","availability":"В наявності"},
-  {"name":"M19","category":"????????? TWS","drop":"170 грн","opt":"3,8$","bulk":"3,8$","image":"images/wireless-headphones/m19-prom.jpg","availability":"В наявності"},
+  {"name":"M19","category":"????????? TWS","drop":"170 грн","opt":"3,8$","bulk":"3,8$","image":"images/wireless-headphones/m19-prom.jpg","availability":"Немає в наявності"},
   {"name":"M21","category":"????????? TWS","drop":"450 грн","opt":"10$","bulk":"10$","image":"images/wireless-headphones/m21-prom.jpg","availability":"В наявності"},
   {"name":"M25","category":"????????? TWS","drop":"153 грн","opt":"3,4$","bulk":"3,4$","image":"images/wireless-headphones/m25-prom.jpg","availability":"В наявності"},
   {"name":"M41","category":"????????? TWS","drop":"170 грн","opt":"3,8$","bulk":"3,8$","image":"images/wireless-headphones/m41-user-prom.jpg","availability":"Немає в наявності"},
