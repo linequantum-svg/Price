@@ -639,21 +639,21 @@
     {
         "name":  "D21 Чорний",
         "category":  "Комплекти",
-        "availability":  "Немає в наявності",
+        "availability":  "В наявності",
         "opt":  "12",
         "drop":  "530"
     },
     {
         "name":  "D21 Сірий",
         "category":  "Комплекти",
-        "availability":  "Немає в наявності",
+        "availability":  "В наявності",
         "opt":  "12",
         "drop":  "530"
     },
     {
         "name":  "D21 Коричневий",
         "category":  "Комплекти",
-        "availability":  "Немає в наявності",
+        "availability":  "В наявності",
         "opt":  "12",
         "drop":  "530"
     },
