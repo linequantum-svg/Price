@@ -1199,7 +1199,7 @@
     {
         "name":  "GS8+ Ultra Чорний",
         "category":  "Смарт-годинники",
-        "availability":  "В наявності",
+        "availability":  "Немає в наявності",
         "opt":  "14",
         "drop":  "650"
     },
