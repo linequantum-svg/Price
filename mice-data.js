@@ -47,7 +47,7 @@ const miceProducts = [
   {
     name: "Мишка ігрова Bajeal M500",
     category: "Комп'ютерні мишки",
-    drop: "160 грн",
+    drop: "170 грн",
     opt: "3,60$",
     bulk: "3,60$",
     image: "https://images.prom.ua/7656081376_w640_h640_besprovodnaya-igrovaya-mysh.jpg",
@@ -56,7 +56,7 @@ const miceProducts = [
   {
     name: "Мишка ігрова Bajeal G7",
     category: "Комп'ютерні мишки",
-    drop: "150 грн",
+    drop: "160 грн",
     opt: "3,47$",
     bulk: "3,47$",
     image: "https://images.prom.ua/7654991480_w640_h640_igrovaya-provodnaya-mysh.jpg",
@@ -65,7 +65,7 @@ const miceProducts = [
   {
     name: "Мишка ігрова Bajeal G5",
     category: "Комп'ютерні мишки",
-    drop: "110 грн",
+    drop: "130 грн",
     opt: "2,70$",
     bulk: "2,70$",
     image: "https://images.prom.ua/7654991601_w640_h640_igrovaya-provodnaya-mysh.jpg",
