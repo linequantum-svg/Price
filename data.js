@@ -1950,63 +1950,63 @@
         "category":  "Бездротові Навушники",
         "availability":  "В наявності",
         "opt":  "2,5",
-        "drop":  "150"
+        "drop":  "120"
     },
     {
         "name":  "Inpods Чорний",
         "category":  "Бездротові Навушники",
         "availability":  "В наявності",
         "opt":  "2,5",
-        "drop":  "150"
+        "drop":  "120"
     },
     {
         "name":  "Inpods Рожевий",
         "category":  "Бездротові Навушники",
         "availability":  "В наявності",
         "opt":  "2,5",
-        "drop":  "150"
+        "drop":  "120"
     },
     {
         "name":  "Inpods Зелений",
         "category":  "Бездротові Навушники",
         "availability":  "В наявності",
         "opt":  "2,5",
-        "drop":  "150"
+        "drop":  "120"
     },
     {
         "name":  "Inpods Блакитний",
         "category":  "Бездротові Навушники",
         "availability":  "В наявності",
         "opt":  "2,5",
-        "drop":  "150"
+        "drop":  "120"
     },
     {
         "name":  "Inpods Синій",
         "category":  "Бездротові Навушники",
         "availability":  "В наявності",
         "opt":  "2,5",
-        "drop":  "150"
+        "drop":  "120"
     },
     {
         "name":  "Inpods Жовтий",
         "category":  "Бездротові Навушники",
         "availability":  "В наявності",
         "opt":  "2,5",
-        "drop":  "150"
+        "drop":  "120"
     },
     {
         "name":  "Inpods Сірий",
         "category":  "Бездротові Навушники",
         "availability":  "В наявності",
         "opt":  "2,5",
-        "drop":  "150"
+        "drop":  "120"
     },
     {
         "name":  "Inpods Червоний",
         "category":  "Бездротові Навушники",
         "availability":  "В наявності",
         "opt":  "2,5",
-        "drop":  "150"
+        "drop":  "120"
     },
     {
         "name":  "E7S Чорний",
