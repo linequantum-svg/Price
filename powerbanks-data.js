@@ -6,7 +6,7 @@
     opt: "11$",
     bulk: "11$",
     image: "images/powerbanks/powerbank-20000-white.jpg",
-    availability: "Немає в наявності"
+    availability: "В наявності"
   },
   {
     name: "Павербанк 20000 kj-C20 Чорний",
@@ -15,7 +15,7 @@
     opt: "11$",
     bulk: "11$",
     image: "images/powerbanks/powerbank-20000-black.jpg",
-    availability: "Немає в наявності"
+    availability: "В наявності"
   },
   {
     name: "Павербанк 20000 kj-C20 Бузковий",
@@ -24,7 +24,7 @@
     opt: "11$",
     bulk: "11$",
     image: "images/powerbanks/powerbank-20000-lilac.jpg",
-    availability: "Немає в наявності"
+    availability: "В наявності"
   },
   {
     name: "Павербанк 20000 kj-C20 Рожевий",
@@ -33,7 +33,7 @@
     opt: "11$",
     bulk: "11$",
     image: "images/powerbanks/powerbank-20000-pink-v2.jpg",
-    availability: "Немає в наявності"
+    availability: "В наявності"
   },
   {
     name: "Павербанк 30000 C20 Чорний",
