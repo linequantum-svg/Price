@@ -33,7 +33,7 @@ const strapsProducts = [
         "opt":  "1$",
         "bulk":  "1$",
         "image":  "images/straps/silicone-44-45mm-prom.jpg",
-        "availability":  "Немає в наявності"
+        "availability":  "В наявності"
     },
     {
         "name":  "Силіконовий ремінець 44/45mm (№5 жовтий)",
@@ -60,7 +60,7 @@ const strapsProducts = [
         "opt":  "1$",
         "bulk":  "1$",
         "image":  "images/straps/silicone-44-45mm-prom.jpg",
-        "availability":  "Немає в наявності"
+        "availability":  "В наявності"
     },
     {
         "name":  "Силіконовий ремінець 44/45mm (№8 помаранчевий)",
@@ -141,7 +141,7 @@ const strapsProducts = [
         "opt":  "1$",
         "bulk":  "1$",
         "image":  "images/straps/silicone-44-45mm-prom.jpg",
-        "availability":  "Немає в наявності"
+        "availability":  "В наявності"
     },
     {
         "name":  "Силіконовий ремінець 44/45mm (№17 зелений)",
@@ -213,7 +213,7 @@ const strapsProducts = [
         "opt":  "1$",
         "bulk":  "1$",
         "image":  "images/straps/silicone-44-45mm-prom.jpg",
-        "availability":  "Немає в наявності"
+        "availability":  "В наявності"
     },
     {
         "name":  "Силіконовий ремінець 38mm (№5 жовтий)",
@@ -285,7 +285,7 @@ const strapsProducts = [
         "opt":  "1$",
         "bulk":  "1$",
         "image":  "images/straps/silicone-44-45mm-prom.jpg",
-        "availability":  "Немає в наявності"
+        "availability":  "В наявності"
     },
     {
         "name":  "Силіконовий ремінець 38mm (№13 фіолетовий)",
@@ -321,7 +321,7 @@ const strapsProducts = [
         "opt":  "1$",
         "bulk":  "1$",
         "image":  "images/straps/silicone-44-45mm-prom.jpg",
-        "availability":  "Немає в наявності"
+        "availability":  "В наявності"
     },
     {
         "name":  "Силіконовий ремінець 38mm (№17 зелений)",
@@ -501,7 +501,7 @@ const strapsProducts = [
         "opt":  "1$",
         "bulk":  "1$",
         "image":  "images/straps/silicone-ultra-prom.jpg",
-        "availability":  "Немає в наявності"
+        "availability":  "В наявності"
     },
     {
         "name":  "Силіконовий ремінець ultra 44/45/49mm (№17 світло-зелений)",
