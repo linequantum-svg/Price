@@ -366,7 +366,7 @@ const strapsProducts = [
         "opt":  "1$",
         "bulk":  "1$",
         "image":  "images/straps/silicone-ultra-prom.jpg",
-        "availability":  "В наявності"
+        "availability":  "Немає в наявності"
     },
     {
         "name":  "Силіконовий ремінець ultra 44/45/49mm (№2 білий)",
