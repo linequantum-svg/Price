@@ -275,7 +275,7 @@
     {
         "name":  "Годинник Olevs 5885 Black Accents",
         "category":  "Годинники Olevs",
-        "availability":  "В наявності",
+        "availability":  "Немає в наявності",
         "opt":  "14",
         "drop":  "600"
     },

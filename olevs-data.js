@@ -397,7 +397,7 @@ const olevsProducts = [
         "bulk":  "14 $",
         "image":  "images/olevs/item-040.png",
         "availabilityUrl":  "https://bit.ly/45isFp3",
-        "availability":  "В наявності"
+        "availability":  "Немає в наявності"
     },
     {
         "name":  "Годинник Olevs 5885 Black Natural",
