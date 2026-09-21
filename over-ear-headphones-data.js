@@ -1,5 +1,5 @@
 const overEarHeadphonesProducts = [
-  {"name":"Kotion G2000 Синій","category":"Накладні навушники","drop":"650 грн","opt":"15$","bulk":"15$","image":"images/over-ear-headphones/g2000-blue-prom.jpg","availability":"В наявності"},
+  {"name":"Kotion G2000 Синій","category":"Накладні навушники","drop":"650 грн","opt":"15$","bulk":"15$","image":"images/over-ear-headphones/g2000-blue-prom.jpg","availability":"Немає в наявності"},
   {"name":"Kotion G2000 Червоний","category":"Накладні навушники","drop":"650 грн","opt":"15$","bulk":"15$","image":"images/over-ear-headphones/g2000-red-prom.jpg","availability":"В наявності"},
   {"name":"Kotion G2000 Помаранчевий","category":"Накладні навушники","drop":"650 грн","opt":"15$","bulk":"15$","image":"images/over-ear-headphones/g2000-orange-prom.jpg","availability":"В наявності"},
   {"name":"Plextone PC780 Синій","category":"Накладні навушники","drop":"480 грн","opt":"11$","bulk":"11$","image":"images/over-ear-headphones/pc780-blue-prom.jpg","availability":"В наявності"},
