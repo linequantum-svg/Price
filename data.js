@@ -1127,27 +1127,6 @@
         "drop":  "1050"
     },
     {
-        "name":  "GS8 Max Чорний",
-        "category":  "Смарт-годинники",
-        "availability":  "Немає в наявності",
-        "opt":  "15",
-        "drop":  "650"
-    },
-    {
-        "name":  "GS8 Max Рожевий",
-        "category":  "Смарт-годинники",
-        "availability":  "Немає в наявності",
-        "opt":  "15",
-        "drop":  "650"
-    },
-    {
-        "name":  "GS8 Max Сірий",
-        "category":  "Смарт-годинники",
-        "availability":  "Немає в наявності",
-        "opt":  "15",
-        "drop":  "650"
-    },
-    {
         "name":  "GS8 Pro Max Чорний",
         "category":  "Смарт-годинники",
         "availability":  "В наявності",
