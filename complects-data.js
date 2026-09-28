@@ -187,7 +187,7 @@ const complectsProducts = [
     bulk: "15$",
     image: "images/complects/item-007.png",
     availabilityUrl: "https://bit.ly/45isFp3",
-    availability: "В наявності"
+    availability: "Немає в наявності"
   },
   {
     name: "Комплект i60 suit extreme Білий",
