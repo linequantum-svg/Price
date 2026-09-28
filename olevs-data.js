@@ -517,7 +517,7 @@ const olevsProducts = [
         "bulk":  "12 $",
         "image":  "images/olevs/item-052.png",
         "availabilityUrl":  "https://bit.ly/45isFp3",
-        "availability":  "В наявності"
+        "availability":  "Немає в наявності"
     },
     {
         "name":  "Годинник Olevs 9809 Red Natural",
