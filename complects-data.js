@@ -277,7 +277,7 @@ const complectsProducts = [
     bulk: "16$",
     image: "images/complects/item-022.png",
     availabilityUrl: "https://bit.ly/45isFp3",
-    availability: "В наявності"
+    availability: "Немає в наявності"
   },
   {
     name: "Комплект DT1000 Білий",
@@ -287,7 +287,7 @@ const complectsProducts = [
     bulk: "16$",
     image: "images/complects/item-023.png",
     availabilityUrl: "https://bit.ly/45isFp3",
-    availability: "В наявності"
+    availability: "Немає в наявності"
   },
   {
     name: "Комплект DT1000 Помаранчевий",
