@@ -327,7 +327,7 @@
     bulk: "11$",
     image: "images/markers/item-031.png",
     availabilityUrl: "https://bit.ly/45isFp3",
-    availability: "В наявності"
+    availability: "Немає в наявності"
   },
   {
     name: "Скетч-маркер 204шт",
