@@ -54,7 +54,7 @@
   {"name":"E8S Зелений","category":"????????? TWS","drop":"230 грн","opt":"5$","bulk":"5$","image":"images/wireless-headphones/e8s-green-prom.jpg","availability":"В наявності"},
   {"name":"E8S Бузковий","category":"????????? TWS","drop":"230 грн","opt":"5$","bulk":"5$","image":"images/wireless-headphones/e8s-lilac-prom.jpg","availability":"Немає в наявності"},
   {"name":"E8S Жовтий","category":"????????? TWS","drop":"230 грн","opt":"5$","bulk":"5$","image":"images/wireless-headphones/e8s-yellow-prom.jpg","availability":"В наявності"},
-  {"name":"K10 Чорний","category":"????????? TWS","drop":"230 грн","opt":"5$","bulk":"5$","image":"images/wireless-headphones/k10-black-prom.jpg","availability":"В наявності"},
+  {"name":"K10 Чорний","category":"????????? TWS","drop":"230 грн","opt":"5$","bulk":"5$","image":"images/wireless-headphones/k10-black-prom.jpg","availability":"Немає в наявності"},
   {"name":"K20 Чорний","category":"????????? TWS","drop":"230 грн","opt":"5$","bulk":"5$","image":"images/wireless-headphones/k20-black-prom.jpg","availability":"В наявності"},
   {"name":"K20 Рожевий","category":"????????? TWS","drop":"230 грн","opt":"5$","bulk":"5$","image":"images/wireless-headphones/k20-pink-prom.jpg","availability":"В наявності"},
   {"name":"K20 Білий","category":"????????? TWS","drop":"230 грн","opt":"5$","bulk":"5$","image":"images/wireless-headphones/k20-white-prom.jpg","availability":"В наявності"},
