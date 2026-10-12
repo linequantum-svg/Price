@@ -477,7 +477,7 @@ const olevsProducts = [
         "bulk":  "12 $",
         "image":  "images/olevs/item-048.png",
         "availabilityUrl":  "https://bit.ly/45isFp3",
-        "availability":  "В наявності"
+        "availability":  "Немає в наявності"
     },
     {
         "name":  "Годинник Olevs 9809 Blue Accents",

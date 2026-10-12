@@ -331,7 +331,7 @@
     {
         "name":  "Годинник Olevs 9809 Black Natural",
         "category":  "Годинники Olevs",
-        "availability":  "В наявності",
+        "availability":  "Немає в наявності",
         "opt":  "12",
         "drop":  "500"
     },
