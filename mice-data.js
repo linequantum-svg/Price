@@ -42,7 +42,7 @@ const miceProducts = [
     opt: "1,26$",
     bulk: "1,26$",
     image: "https://images.prom.ua/7656221957_w640_h640_provodnaya-opticheskaya-mysh.jpg",
-    availability: "В наявності"
+    availability: "Немає в наявності"
   },
   {
     name: "Мишка ігрова Bajeal M500",
