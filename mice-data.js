@@ -51,7 +51,7 @@ const miceProducts = [
     opt: "3,60$",
     bulk: "3,60$",
     image: "https://images.prom.ua/7656081376_w640_h640_besprovodnaya-igrovaya-mysh.jpg",
-    availability: "В наявності"
+    availability: "Немає в наявності"
   },
   {
     name: "Мишка ігрова Bajeal G7",
