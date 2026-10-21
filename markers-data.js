@@ -348,6 +348,146 @@
     image: "images/markers/item-033.png",
     availabilityUrl: "https://bit.ly/45isFp3",
     availability: "В наявності"
+  },
+  {
+    name: "Маркери акрилові Languo M720-22, набір 24 кольори",
+    category: "Маркери, фломастери",
+    drop: "460 грн",
+    opt: "10,20$",
+    bulk: "10,20$",
+    image: "images/markers/languo-m720-24.jpg",
+    availabilityUrl: "https://bit.ly/45isFp3",
+    availability: "Немає в наявності"
+  },
+  {
+    name: "Маркери акрилові Languo M720-23, набір 36 кольорів",
+    category: "Маркери, фломастери",
+    drop: "630 грн",
+    opt: "13,90$",
+    bulk: "13,90$",
+    image: "images/markers/languo-m720-36.jpg",
+    availabilityUrl: "https://bit.ly/45isFp3",
+    availability: "Немає в наявності"
+  },
+  {
+    name: "Маркери акрилові Languo M720-24, набір 48 кольорів",
+    category: "Маркери, фломастери",
+    drop: "780 грн",
+    opt: "17,30$",
+    bulk: "17,30$",
+    image: "images/markers/languo-m720-48.jpg",
+    availabilityUrl: "https://bit.ly/45isFp3",
+    availability: "Немає в наявності"
+  },
+  {
+    name: "Маркери акрилові Languo M720-25, набір 60 кольорів",
+    category: "Маркери, фломастери",
+    drop: "920 грн",
+    opt: "20,40$",
+    bulk: "20,40$",
+    image: "images/markers/languo-m720-60.jpg",
+    availabilityUrl: "https://bit.ly/45isFp3",
+    availability: "Немає в наявності"
+  },
+  {
+    name: "Маркери акрилові Languo M720-29, набір 96 кольорів",
+    category: "Маркери, фломастери",
+    drop: "1370 грн",
+    opt: "30,30$",
+    bulk: "30,30$",
+    image: "images/markers/languo-m720-96.jpg",
+    availabilityUrl: "https://bit.ly/45isFp3",
+    availability: "Немає в наявності"
+  },
+  {
+    name: "Маркери акрилові Languo M720-30, набір 192 кольори",
+    category: "Маркери, фломастери",
+    drop: "2490 грн",
+    opt: "55,30$",
+    bulk: "55,30$",
+    image: "images/markers/languo-m720-192.jpg",
+    availabilityUrl: "https://bit.ly/45isFp3",
+    availability: "Немає в наявності"
+  },
+  {
+    name: "Маркери акрилові Languo M720-31, набір 240 кольорів",
+    category: "Маркери, фломастери",
+    drop: "2940 грн",
+    opt: "65,30$",
+    bulk: "65,30$",
+    image: "images/markers/languo-m720-240.jpg",
+    availabilityUrl: "https://bit.ly/45isFp3",
+    availability: "Немає в наявності"
+  },
+  {
+    name: "Маркери акрилові Languo M720-37, набір 288 кольорів",
+    category: "Маркери, фломастери",
+    drop: "3840 грн",
+    opt: "85$",
+    bulk: "85$",
+    image: "images/markers/languo-m720-288.jpg",
+    availabilityUrl: "https://bit.ly/45isFp3",
+    availability: "Немає в наявності"
+  },
+  {
+    name: "Маркери акрилові Languo M720-52, набір 384 кольори",
+    category: "Маркери, фломастери",
+    drop: "4960 грн",
+    opt: "110$",
+    bulk: "110$",
+    image: "images/markers/languo-m720-384.jpg",
+    availabilityUrl: "https://bit.ly/45isFp3",
+    availability: "Немає в наявності"
+  },
+  {
+    name: "Ручки гелеві акрилові Languo P650-16, набір 36 кольорів",
+    category: "Маркери, фломастери",
+    drop: "410 грн",
+    opt: "8,90$",
+    bulk: "8,90$",
+    image: "images/markers/languo-p650-36.jpg",
+    availabilityUrl: "https://bit.ly/45isFp3",
+    availability: "Немає в наявності"
+  },
+  {
+    name: "Ручки гелеві акрилові Languo P650-17, набір 54 кольори",
+    category: "Маркери, фломастери",
+    drop: "590 грн",
+    opt: "13$",
+    bulk: "13$",
+    image: "images/markers/languo-p650-54.jpg",
+    availabilityUrl: "https://bit.ly/45isFp3",
+    availability: "Немає в наявності"
+  },
+  {
+    name: "Ручки гелеві акрилові Languo P650-18, набір 72 кольори",
+    category: "Маркери, фломастери",
+    drop: "760 грн",
+    opt: "16,80$",
+    bulk: "16,80$",
+    image: "images/markers/languo-p650-72.jpg",
+    availabilityUrl: "https://bit.ly/45isFp3",
+    availability: "Немає в наявності"
+  },
+  {
+    name: "Ручки гелеві акрилові Languo P650-19, набір 90 кольорів",
+    category: "Маркери, фломастери",
+    drop: "940 грн",
+    opt: "20,70$",
+    bulk: "20,70$",
+    image: "images/markers/languo-p650-90.jpg",
+    availabilityUrl: "https://bit.ly/45isFp3",
+    availability: "Немає в наявності"
+  },
+  {
+    name: "Ручки гелеві акрилові Languo P650-20, набір 144 кольори",
+    category: "Маркери, фломастери",
+    drop: "1500 грн",
+    opt: "33,20$",
+    bulk: "33,20$",
+    image: "images/markers/languo-p650-144.jpg",
+    availabilityUrl: "https://bit.ly/45isFp3",
+    availability: "Немає в наявності"
   }
 ];
 
