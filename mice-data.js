@@ -33,7 +33,7 @@ const miceProducts = [
     opt: "1,53$",
     bulk: "1,53$",
     image: "https://images.prom.ua/7658212076_w640_h640_myshka-besprovodnaya-bajeal.jpg",
-    availability: "В наявності"
+    availability: "Немає в наявності"
   },
   {
     name: "Мишка Bajeal D12",
