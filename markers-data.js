@@ -2,7 +2,7 @@
   {
     name: "Маркер GuangNa Acrylic brush marker GN.8101 12шт",
     category: "Маркери, фломастери",
-    drop: "160 грн",
+    drop: "170 грн",
     opt: "3,5$",
     bulk: "3,5$",
     image: "images/markers/item-001.png",
@@ -12,7 +12,7 @@
   {
     name: "Маркер GuangNa Acrylic brush marker GN.8101 24шт",
     category: "Маркери, фломастери",
-    drop: "320 грн",
+    drop: "330 грн",
     opt: "7$",
     bulk: "7$",
     image: "images/markers/item-002.png",
@@ -22,7 +22,7 @@
   {
     name: "Маркер GuangNa Acrylic brush marker GN.8101 36шт",
     category: "Маркери, фломастери",
-    drop: "450 грн",
+    drop: "460 грн",
     opt: "10$",
     bulk: "10$",
     image: "images/markers/item-003.png",
@@ -32,7 +32,7 @@
   {
     name: "Маркер GuangNa Acrylic brush marker GN.8101 48шт",
     category: "Маркери, фломастери",
-    drop: "610 грн",
+    drop: "630 грн",
     opt: "13,5$",
     bulk: "13,5$",
     image: "images/markers/item-004.png",
@@ -42,7 +42,7 @@
   {
     name: "Маркер GuangNa Acrylic brush marker GN.8101 60шт",
     category: "Маркери, фломастери",
-    drop: "770 грн",
+    drop: "790 грн",
     opt: "17$",
     bulk: "17$",
     image: "images/markers/item-005.png",
@@ -52,7 +52,7 @@
   {
     name: "Маркер GuangNa Acrylic brush marker GN.8101 72шт",
     category: "Маркери, фломастери",
-    drop: "900 грн",
+    drop: "920 грн",
     opt: "20$",
     bulk: "20$",
     image: "images/markers/item-006.png",
@@ -62,7 +62,7 @@
   {
     name: "Маркер GuangNa Acrylic brush marker GN.8101 100шт",
     category: "Маркери, фломастери",
-    drop: "1260 грн",
+    drop: "1290 грн",
     opt: "28$",
     bulk: "28$",
     image: "images/markers/item-007.png",
@@ -72,7 +72,7 @@
   {
     name: "Маркер GuangNa Acrylic brush marker GN.8101 120шт",
     category: "Маркери, фломастери",
-    drop: "1530 грн",
+    drop: "1570 грн",
     opt: "34$",
     bulk: "34$",
     image: "images/markers/item-008.png",
@@ -82,7 +82,7 @@
   {
     name: "Маркер GuangNa Acrylic brush marker GN.8101 168шт",
     category: "Маркери, фломастери",
-    drop: "2120 грн",
+    drop: "2170 грн",
     opt: "47$",
     bulk: "47$",
     image: "images/markers/item-009.png",
@@ -92,7 +92,7 @@
   {
     name: "Маркер GuangNa Acrylic brush marker GN.8101 200шт",
     category: "Маркери, фломастери",
-    drop: "2480 грн",
+    drop: "2530 грн",
     opt: "55$",
     bulk: "55$",
     image: "images/markers/item-010.png",
@@ -102,7 +102,7 @@
   {
     name: "Маркер GuangNa Acrylic brush marker GN.8101 240шт",
     category: "Маркери, фломастери",
-    drop: "3020 грн",
+    drop: "3090 грн",
     opt: "67$",
     bulk: "67$",
     image: "images/markers/item-011.png",
@@ -112,7 +112,7 @@
   {
     name: "Маркер GuangNa Acrylic brush marker GN.8101 288шт",
     category: "Маркери, фломастери",
-    drop: "3560 грн",
+    drop: "3640 грн",
     opt: "79$",
     bulk: "79$",
     image: "images/markers/item-012.png",
@@ -122,7 +122,7 @@
   {
     name: "Маркер GuangNa Acrylic brush marker GN.8101 360шт",
     category: "Маркери, фломастери",
-    drop: "5540 грн",
+    drop: "5660 грн",
     opt: "123$",
     bulk: "123$",
     image: "images/markers/item-034.png",
@@ -132,7 +132,7 @@
   {
     name: "Маркер GuangNa Acrylic brush marker GN.8101 366шт",
     category: "Маркери, фломастери",
-    drop: "5540 грн",
+    drop: "5660 грн",
     opt: "123$",
     bulk: "123$",
     image: "images/markers/item-035.png",
@@ -142,7 +142,7 @@
   {
     name: "Маркер GuangNa Acrylic brush marker GN.8101 408шт",
     category: "Маркери, фломастери",
-    drop: "6170 грн",
+    drop: "6310 грн",
     opt: "137$",
     bulk: "137$",
     image: "images/markers/item-036.png",
