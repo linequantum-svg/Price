@@ -1948,7 +1948,7 @@
     {
         "name":  "Inpods Синій",
         "category":  "Бездротові Навушники",
-        "availability":  "В наявності",
+        "availability":  "Немає в наявності",
         "opt":  "2,5",
         "drop":  "120"
     },

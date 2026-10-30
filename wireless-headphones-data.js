@@ -35,7 +35,7 @@
   {"name":"Inpods Рожевий","category":"????????? TWS","drop":"120 грн","opt":"2,5$","bulk":"2,5$","image":"images/wireless-headphones/inpods-pink-prom.jpg","availability":"В наявності"},
   {"name":"Inpods Зелений","category":"????????? TWS","drop":"120 грн","opt":"2,5$","bulk":"2,5$","image":"images/wireless-headphones/inpods-green-prom.jpg","availability":"В наявності"},
   {"name":"Inpods Блакитний","category":"????????? TWS","drop":"120 грн","opt":"2,5$","bulk":"2,5$","image":"images/wireless-headphones/inpods-lightblue-prom.jpg","availability":"В наявності"},
-  {"name":"Inpods Синій","category":"????????? TWS","drop":"120 грн","opt":"2,5$","bulk":"2,5$","image":"images/wireless-headphones/inpods-blue-prom.jpg","availability":"В наявності"},
+  {"name":"Inpods Синій","category":"????????? TWS","drop":"120 грн","opt":"2,5$","bulk":"2,5$","image":"images/wireless-headphones/inpods-blue-prom.jpg","availability":"Немає в наявності"},
   {"name":"Inpods Жовтий","category":"????????? TWS","drop":"120 грн","opt":"2,5$","bulk":"2,5$","image":"images/wireless-headphones/inpods-yellow-prom.jpg","availability":"В наявності"},
   {"name":"Inpods Сірий","category":"????????? TWS","drop":"120 грн","opt":"2,5$","bulk":"2,5$","image":"images/wireless-headphones/inpods-gray-prom.jpg","availability":"В наявності"},
   {"name":"Inpods Червоний","category":"????????? TWS","drop":"120 грн","opt":"2,5$","bulk":"2,5$","image":"images/wireless-headphones/inpods-red-prom.jpg","availability":"В наявності"},
