@@ -422,7 +422,7 @@
     {
         "name":  "Маркер GuangNa Acrylic brush marker GN.8101 120шт",
         "category":  "Маркери, фломастери",
-        "availability":  "В наявності",
+        "availability":  "Немає в наявності",
         "opt":  "34",
         "drop":  "1530"
     },
