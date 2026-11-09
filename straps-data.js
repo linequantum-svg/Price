@@ -213,7 +213,7 @@ const strapsProducts = [
         "opt":  "1$",
         "bulk":  "1$",
         "image":  "images/straps/silicone-44-45mm-prom.jpg",
-        "availability":  "В наявності"
+        "availability":  "Немає в наявності"
     },
     {
         "name":  "Силіконовий ремінець 38mm (№5 жовтий)",
