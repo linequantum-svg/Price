@@ -3278,7 +3278,7 @@
     {
         "name":  "Kotion G2000 Синій",
         "category":  "Ігрові навушники",
-        "availability":  "Немає в наявності",
+        "availability":  "В наявності",
         "opt":  "15",
         "drop":  "650"
     },
