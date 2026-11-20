@@ -457,7 +457,7 @@ const olevsProducts = [
         "bulk":  "14 $",
         "image":  "images/olevs/item-046.png",
         "availabilityUrl":  "https://bit.ly/45isFp3",
-        "availability":  "В наявності"
+        "availability":  "Немає в наявності"
     },
     {
         "name":  "Годинник Olevs 9809 Black Accents",

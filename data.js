@@ -317,7 +317,7 @@
     {
         "name":  "Годинник Olevs 5885 White Natural",
         "category":  "Годинники Olevs",
-        "availability":  "В наявності",
+        "availability":  "Немає в наявності",
         "opt":  "14",
         "drop":  "600"
     },
