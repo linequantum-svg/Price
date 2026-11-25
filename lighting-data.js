@@ -24,7 +24,7 @@ const lightingProducts = [
     opt: "6,2$",
     bulk: "6,2$",
     image: "images/lighting/luna-12-prom.jpg",
-    availability: "В наявності"
+    availability: "Немає в наявності"
   },
   {
     name: "Світильник Луна 15см",
