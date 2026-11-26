@@ -150,6 +150,16 @@
     availability: "В наявності"
   },
   {
+    name: "Маркери акрилові GuangNa GN.8201F Skin Color, набір 24 кольори",
+    category: "Маркери, фломастери",
+    drop: "330 грн",
+    opt: "7$",
+    bulk: "7$",
+    image: "images/markers/guangna-gn8201f-skin-24.webp",
+    availabilityUrl: "https://bit.ly/45isFp3",
+    availability: "В наявності"
+  },
+  {
     name: "Маркер Acrylic Painter CH-1011 12шт",
     category: "Маркери, фломастери",
     drop: "170 грн",
@@ -488,16 +498,6 @@
     image: "images/markers/languo-p650-144.jpg",
     availabilityUrl: "https://bit.ly/45isFp3",
     availability: "Немає в наявності"
-  },
-  {
-    name: "Маркери акрилові GuangNa GN.8201F Skin Color, набір 24 кольори",
-    category: "Маркери, фломастери",
-    drop: "330 грн",
-    opt: "7$",
-    bulk: "7$",
-    image: "images/markers/guangna-gn8201f-skin-24.webp",
-    availabilityUrl: "https://bit.ly/45isFp3",
-    availability: "В наявності"
   }
 ];
 
