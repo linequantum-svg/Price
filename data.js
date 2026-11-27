@@ -1150,7 +1150,7 @@
     {
         "name":  "GS8 Mini Чорний",
         "category":  "Смарт-годинники",
-        "availability":  "В наявності",
+        "availability":  "Немає в наявності",
         "opt":  "15",
         "drop":  "650"
     },
